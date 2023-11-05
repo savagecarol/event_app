@@ -79,7 +79,7 @@ class _SplashPageState extends State<SplashPage> {
         body: Column(
           children: <Widget>[Expanded(child: _getBody()), _getBottomBar()],
         ),
-        resizeToAvoidBottomInset: false,
+         resizeToAvoidBottomInset: false,
       ),
     );
   }
