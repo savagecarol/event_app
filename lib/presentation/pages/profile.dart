@@ -1,4 +1,5 @@
 import 'package:event_app/presentation/components/custom_button.dart';
+import 'package:event_app/presentation/components/custom_text_field.dart';
 import 'package:event_app/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
@@ -18,7 +19,7 @@ class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
+      color: Colors.white,
       padding: const EdgeInsets.all(32),
       child: SingleChildScrollView(
         child: Column(
@@ -58,6 +59,14 @@ class _ProfileState extends State<Profile> {
               labelText: "Logout",
               isLoading: isLgOutButtonLoading,
             )
+          ,
+
+                      SizedBox(height: 20),
+
+          CustomTextField(
+            textInputType: TextInputType.number,
+            backgroundColor: Colors.blueAccent.withOpacity(.1),
+          )
           ],
         ),
 
