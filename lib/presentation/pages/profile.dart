@@ -1,5 +1,6 @@
 import 'package:event_app/presentation/Auth.dart';
 import 'package:event_app/presentation/components/custom_button.dart';
+import 'package:event_app/presentation/components/custom_post_card.dart';
 import 'package:event_app/presentation/components/custom_text_button.dart';
 import 'package:event_app/presentation/components/custom_text_field.dart';
 import 'package:event_app/utils/colors_constants.dart';
@@ -32,7 +33,55 @@ class _ProfileState extends State<Profile> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+
+            CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
             SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+            SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+            SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+            SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+            SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+            SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+            SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+            SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+            SizedBox(height: 20),
+
+                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+
+
+
             const Text(
               "Phone Number",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
