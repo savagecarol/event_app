@@ -24,6 +24,9 @@ class _ProfileState extends State<Profile> {
 
   String? phoneNumber;
 
+  var color = false;
+  
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,53 +37,23 @@ class _ProfileState extends State<Profile> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
+              for(int i = 0 ; i < 5 ; i++)
+            Column(
+              children: [
+                CustomPostCard(postHeading: "Badminton", 
+                postDate: DateTime.now(), 
+                postBackgroundColor: color ? Colors.greenAccent : Colors.black ,
 
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
-            SizedBox(height: 20),
-
-                        CustomPostCard(postHeading: "Badminton", postDate: DateTime.now(), postImagePath: 'assets/images/badminton.jpg'),
-
-
+                onTap: () {
+                  setState(() {
+                    color = !color;
+                  });
+                },
+                 postImagePath:
+                  'assets/images/badminton.jpg'),
+              ],
+            ),
+   
 
             const Text(
               "Phone Number",

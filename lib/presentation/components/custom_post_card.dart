@@ -25,6 +25,7 @@ class CustomPostCard extends StatelessWidget {
   final String postImagePath;
   final double imageSize;
   final String? imagConstraints; // like dit-in, collapsed etc.
+  final Function() onTap;
 
   const CustomPostCard(
       {super.key,
@@ -45,6 +46,7 @@ class CustomPostCard extends StatelessWidget {
       required this.postImagePath,
       this.imageSize = 18,
       this.iconSize = 32,
+      required this.onTap,
       this.imagConstraints});
 
 // divide in 3 parts, upper middle and lower
@@ -65,62 +67,54 @@ class CustomPostCard extends StatelessWidget {
   }
 
   Widget createHeader() {
-    return GestureDetector(
-      child: Container(
-        margin: const EdgeInsets.all(3.0),
-        padding: const EdgeInsets.all(3.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              postHeading,
-              style: TextStyle(fontWeight: fontWeight, fontSize: fontSize),
-            ),
-            Text(
-              "${postDate.day}/${postDate.month}/${postDate.year}",
-              style: TextStyle(fontWeight: fontWeight, fontSize: fontSize),
-            ),
-          ],
-        ),
+    return Container(
+      margin: const EdgeInsets.all(3.0),
+      padding: const EdgeInsets.all(3.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            postHeading,
+            style: TextStyle(fontWeight: fontWeight, fontSize: fontSize),
+          ),
+          Text(
+            "${postDate.day}/${postDate.month}/${postDate.year}",
+            style: TextStyle(fontWeight: fontWeight, fontSize: fontSize),
+          ),
+        ],
       ),
     );
   }
 
   Widget createBody() {
-    return GestureDetector(
-      child: Container(
-          margin: const EdgeInsets.all(0), child: Image.asset(postImagePath)),
-    );
+    return Container(
+        margin: const EdgeInsets.all(0), child: Image.asset(postImagePath));
   }
 
   Widget createFooter() {
-    return GestureDetector(
-      child: Container(
-        margin: const EdgeInsets.all(3.0),
-        padding: const EdgeInsets.all(3.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            CustomButton(
-              onTap: () => {       
-                
-                     },
-              containerColor: postBackgroundColor,
-              shadowColor: postBackgroundColor,
-              postIcon: Icons.heat_pump_rounded,
-              postIconSize: 50,
-              visiblepostIcon: true,
-            ),
-            CustomButton(
-              onTap: () => {},
-              containerColor: postBackgroundColor,
-              shadowColor: postBackgroundColor,
-              postIcon: Icons.comment,
-              postIconSize: 50,
-              visiblepostIcon: true,
-            )
-          ],
-        ),
+    return Container(
+      margin: const EdgeInsets.all(3.0),
+      padding: const EdgeInsets.all(3.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          CustomButton(
+            onTap: onTap,
+            containerColor: postBackgroundColor,
+            shadowColor: postBackgroundColor,
+            postIcon: Icons.heat_pump_rounded,
+            postIconSize: 50,
+            visiblepostIcon: true,
+          ),
+          CustomButton(
+            onTap: onTap,
+            containerColor: postBackgroundColor,
+            shadowColor: postBackgroundColor,
+            postIcon: Icons.comment,
+            postIconSize: 50,
+            visiblepostIcon: true,
+          )
+        ],
       ),
     );
   }
