@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: Urlconstants.authUrl,
       getPages: [
-
           GetPage(
           name: Urlconstants.firstPageUrl,
           page: () => SplashPage(),
@@ -31,7 +30,6 @@ class MyApp extends StatelessWidget {
           name:  Urlconstants.authUrl,
           page: () => Auth(),
         ),
-
       ],
     );
   }

@@ -1,3 +1,4 @@
+import 'package:event_app/model/action/UserController.dart';
 import 'package:event_app/presentation/components/custom_button.dart';
 import 'package:event_app/presentation/components/custom_text_button.dart';
 import 'package:event_app/presentation/components/custom_text_field.dart';
@@ -11,9 +12,9 @@ import '../../utils/global.dart';
 class Profile extends StatelessWidget {
   var isLgOutButtonLoading = false;
 
-
   @override
   Widget build(BuildContext context) {
+    print("DFfdgfdgfdgdfg");
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.all(32),
@@ -21,14 +22,26 @@ class Profile extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+
+            Obx(() {
+              if (userController.user.value.phoneNumber == null)
+                return Text("Please enter number",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 30));
+
+              return Text(userController.user.value.phoneNumber ?? "",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15));
+            }),
+
             SizedBox(height: 20),
-            SizedBox(height: 10),
             CustomTextField(
               hintText: "Enter Phone Number",
               initialValue: "",
               width: double.infinity,
               onChange: (value) {
+                // getX Controller --> user obs --> observable
                 userController.changePhoneNumber(value);
+                // action perform
                 print(userController.user.value.phoneNumber);
               },
             ),
@@ -50,7 +63,8 @@ class Profile extends StatelessWidget {
             SizedBox(height: 20),
             CustomButton(
               onTap: () {
-                var p = validatePhoneNumber(userController.user.value.phoneNumber);
+                var p =
+                    validatePhoneNumber(userController.user.value.phoneNumber);
                 if (p != null) {
                   showToast(msg: p);
                   return;

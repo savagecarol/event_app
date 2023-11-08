@@ -10,10 +10,7 @@ class Auth extends StatefulWidget {
 }
 
 class _AuthState extends State<Auth> {
-  /* 
-  CALLED WHEN PAGE IS BUILD 
-  ----> login function called in async 
-   */
+
 
   @override
   void initState() {
