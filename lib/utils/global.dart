@@ -24,7 +24,7 @@ showToast({required String? msg}) {
         gravity: ToastGravity.TOP_RIGHT,
         timeInSecForIosWeb: 2,
         backgroundColor: Colors.black,
-        textColor: Colors.black,
+        textColor: Colors.white,
         fontSize: 16.0);
   }
 }
