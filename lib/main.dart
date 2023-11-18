@@ -1,4 +1,5 @@
 import 'package:event_app/presentation/Auth.dart';
+import 'package:event_app/presentation/Settings.dart';
 import 'package:event_app/presentation/SplashPage.dart';
 import 'package:event_app/utils/string_constants.dart';
 import 'package:event_app/utils/url_constants.dart';
@@ -19,11 +20,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: StringConstants.appName,
       debugShowCheckedModeBanner: false,
-      initialRoute: Urlconstants.authUrl,
-      routes: {
-        Urlconstants.firstPageUrl : (context) => SplashPage(),
-        Urlconstants.authUrl : (context) => const Auth()
-      },
+      home: Settings(),
+      // initialRoute: Urlconstants.sett,
+      // routes: {
+      //   Urlconstants.firstPageUrl : (context) => SplashPage(),
+      //   Urlconstants.authUrl : (context) => const Auth()
+      // },
     );
   }
 }
