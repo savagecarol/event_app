@@ -1,4 +1,3 @@
-import 'package:event_app/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
@@ -21,7 +20,7 @@ class CustomButton extends StatelessWidget {
       this.visiblepostIcon = false,
       this.sizelabelText = 20,
       this.labelTextWeight = FontWeight.w500,
-      required this.onTap ,
+      required this.onTap,
       this.isLoading = false,
       this.postIconSize = 24,
       this.postIconColor = Colors.black,
@@ -32,17 +31,18 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        decoration: BoxDecoration(color: containerColor,
-        border : Border.all(
-          color: Colors.black,
-          width: 2,
-        ),
-         boxShadow: [
-          BoxShadow(
-              color: shadowColor.withOpacity(.1),
-              blurRadius: 3,
-              offset: Offset(0, 5))
-        ]),
+        decoration: BoxDecoration(
+            color: containerColor,
+            border: Border.all(
+              color: Colors.black,
+              width: 2,
+            ),
+            boxShadow: [
+              BoxShadow(
+                  color: shadowColor.withOpacity(.1),
+                  blurRadius: 3,
+                  offset: Offset(0, 5))
+            ]),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: Center(

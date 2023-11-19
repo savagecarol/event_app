@@ -1,4 +1,4 @@
-# event_app
+# connect
 
 A new Flutter project.
 

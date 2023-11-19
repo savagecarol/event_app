@@ -1,4 +1,4 @@
-import 'package:event_app/utils/url_constants.dart';
+import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,8 +10,6 @@ class Auth extends StatefulWidget {
 }
 
 class _AuthState extends State<Auth> {
-
-
   @override
   void initState() {
     super.initState();

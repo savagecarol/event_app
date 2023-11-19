@@ -1,7 +1,5 @@
-import 'package:event_app/utils/colors_constants.dart';
-import 'package:event_app/utils/global.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
@@ -13,7 +11,7 @@ class CustomTextField extends StatelessWidget {
   final bool isPrefixIcon;
   final bool obstruct;
 
-   CustomTextField({
+  CustomTextField({
     required this.hintText,
     required this.initialValue,
     required this.width,
@@ -30,19 +28,20 @@ class CustomTextField extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: 8,
       ),
-      decoration: BoxDecoration(color: Colors.white,
-      border: Border.all(width: 1 , color: Colors.black),
-       boxShadow: [
-        BoxShadow(
-            color: Colors.black.withOpacity(.1),
-            blurRadius: 3,
-            offset: Offset(0, 5))
-      ]),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(width: 1, color: Colors.black),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.black.withOpacity(.1),
+                blurRadius: 3,
+                offset: Offset(0, 5))
+          ]),
       child: Padding(
         padding: (isPrefixIcon) ? EdgeInsets.all(0) : EdgeInsets.only(left: 16),
         child: TextFormField(
-          maxLength: 10,
-          obscureText: obstruct,
+            maxLength: 10,
+            obscureText: obstruct,
             onChanged: onChange,
             keyboardType: textInputType,
             style: TextStyle(fontSize: 16),
@@ -56,8 +55,8 @@ class CustomTextField extends StatelessWidget {
                         color: Colors.black,
                       )
                     : null,
-                hintStyle:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.w400))),
+                hintStyle: const TextStyle(
+                    fontSize: 16, fontWeight: FontWeight.w400))),
       ),
     );
   }

@@ -1,3 +1,3 @@
-class StringConstants{
-  static String appName = "event_App";
+class StringConstants {
+  static String appName = "connect";
 }

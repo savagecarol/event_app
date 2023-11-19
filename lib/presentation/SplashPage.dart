@@ -1,7 +1,7 @@
-import 'package:event_app/presentation/pages/home_pages.dart';
-import 'package:event_app/presentation/pages/post.dart';
-import 'package:event_app/presentation/pages/profile.dart';
-import 'package:event_app/utils/global.dart';
+import 'package:connect/presentation/pages/home_pages.dart';
+import 'package:connect/presentation/pages/post.dart';
+import 'package:connect/presentation/pages/profile.dart';
+import 'package:connect/utils/global.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

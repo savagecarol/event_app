@@ -1,4 +1,4 @@
-import 'package:event_app/model/global_variable.dart';
+import 'package:connect/model/global_variable.dart';
 import 'package:get/get.dart';
 
 class GlobalController extends GetxController {

@@ -10,7 +10,7 @@ class User {
 final UserController userController = Get.put(UserController());
 
 
-import 'package:event_app/model/User.dart';
+import 'package:connect/model/User.dart';
 import 'package:get/get.dart';
 
 // or any action on you

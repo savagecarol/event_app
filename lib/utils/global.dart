@@ -1,13 +1,9 @@
-import 'package:event_app/model/action/GlobalController.dart';
+import 'package:connect/model/action/GlobalController.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
-
 final GlobalController globalController = Get.put(GlobalController());
-
-
-
 
 String? validatePhoneNumber(String? phone) {
   String? required = requiredString(phone);
