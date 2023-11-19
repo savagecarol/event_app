@@ -3,16 +3,12 @@ import 'package:event_app/presentation/pages/post.dart';
 import 'package:event_app/presentation/pages/profile.dart';
 import 'package:event_app/utils/global.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class SplashPage extends StatefulWidget {
-  @override
-  _SplashPageState createState() => _SplashPageState();
-}
-
-class _SplashPageState extends State<SplashPage> {
- 
+class SplashPage extends StatelessWidget {
   _getBody() {
-    switch (currentPage) {
+    print(globalController.globalvariable.value.counter);
+    switch (globalController.globalvariable.value.counter) {
       case 0:
         return HomePage();
       case 1:
@@ -25,6 +21,8 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   _getBottomBar() {
+    print(globalController.globalvariable.value.counter);
+
     return Card(
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       margin: const EdgeInsets.all(0),
@@ -42,9 +40,10 @@ class _SplashPageState extends State<SplashPage> {
   Widget _getBottomBarItem({required int index, required IconData icontab}) {
     return GestureDetector(
       onTap: () {
-        setState(() {
-          currentPage = index;
-        });
+        globalController.changeCounter(index);
+
+        print("value changed -----> " +
+            globalController.globalvariable.value.counter.toString());
       },
       child: Container(
         alignment: Alignment.center,
@@ -53,15 +52,19 @@ class _SplashPageState extends State<SplashPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.all(5), 
+              padding: EdgeInsets.all(5),
               decoration: BoxDecoration(
-                color: currentPage == index ? Colors.black : Colors.transparent,
+                color: globalController.globalvariable.value.counter == index
+                    ? Colors.black
+                    : Colors.transparent,
                 borderRadius: BorderRadius.circular(5),
               ),
               child: Center(
                 child: Icon(
                   icontab,
-                  color: currentPage == index ? Colors.white : Colors.black38,
+                  color: globalController.globalvariable.value.counter == index
+                      ? Colors.white
+                      : Colors.black38,
                   size: 32,
                 ),
               ),
@@ -76,10 +79,12 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: <Widget>[Expanded(child: _getBody()), _getBottomBar()],
-        ),
-         resizeToAvoidBottomInset: false,
+        body: Obx(() {
+          return Column(
+            children: <Widget>[Expanded(child: _getBody()), _getBottomBar()],
+          );
+        }),
+        resizeToAvoidBottomInset: false,
       ),
     );
   }
