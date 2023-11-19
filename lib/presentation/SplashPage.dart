@@ -3,6 +3,7 @@ import 'package:connect/presentation/pages/post.dart';
 import 'package:connect/presentation/pages/profile.dart';
 import 'package:connect/utils/global.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class SplashPage extends StatelessWidget {
@@ -45,17 +46,17 @@ class SplashPage extends StatelessWidget {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 60,
+        height: 60.h,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.all(5),
+              padding: EdgeInsets.all(5.h),
               decoration: BoxDecoration(
                 color: globalController.globalvariable.value.counter == index
                     ? Colors.black
                     : Colors.transparent,
-                borderRadius: BorderRadius.circular(5),
+                borderRadius: BorderRadius.circular(5.r),
               ),
               child: Center(
                 child: Icon(
@@ -77,6 +78,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         body: Obx(() {
           return Column(
             children: <Widget>[Expanded(child: _getBody()), _getBottomBar()],
