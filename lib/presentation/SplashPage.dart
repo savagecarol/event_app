@@ -22,7 +22,6 @@ class SplashPage extends StatelessWidget {
 
   _getBottomBar() {
     print(globalController.globalvariable.value.counter);
-
     return Card(
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       margin: const EdgeInsets.all(0),
@@ -41,7 +40,6 @@ class SplashPage extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         globalController.changeCounter(index);
-
         print("value changed -----> " +
             globalController.globalvariable.value.counter.toString());
       },

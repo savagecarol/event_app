@@ -8,10 +8,10 @@ import 'package:flutter/material.dart';
 
 class ColorConstants{
 
-static Color pink = const Color.fromRGBO(255,188,217,1);
-static Color lightPink = const Color.fromRGBO(225,193,222,1);
-static Color accentPink = const Color.fromRGBO(255,188,217,1);
-static Color lightBlue = const Color.fromRGBO(195,197,226,1);
-static Color blue = const Color.fromRGBO(165,202,231,1);
+static Color red = const Color.fromRGBO(209,49,60,1);
+static Color lightRed = const Color.fromRGBO(255,111,112,1);
+static Color darkRed = const Color.fromRGBO(165,0,0,1);
+static Color darkestRed = const Color.fromRGBO(102,0,0,1);
+static Color accentRed = const Color.fromRGBO(255,209,210,1);
 
 }

@@ -1,11 +1,9 @@
 import 'package:event_app/model/action/GlobalController.dart';
-import 'package:event_app/model/action/UserController.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
 
-final UserController userController = Get.put(UserController());
 final GlobalController globalController = Get.put(GlobalController());
 
 

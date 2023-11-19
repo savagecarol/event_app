@@ -24,29 +24,16 @@ class _HomePageState extends State<HomePage> {
         children: [
           const SizedBox(
             height: 20,
-          ),
-          Builder(builder: ((context) {
-            for (int i = 0; i < k.length; i++) {
-              if (k[i] % 2 == 0) count++;
-            }
-
-            if (count <= 5) {
-              print("AAAA");
-              return Text("PIYUSH", style: TextStyle(fontSize: 60));
-            } else if (count > 5 && count <= 10) {
-                       print("BBB");
-              return Text("PIYUSH", style: TextStyle(fontSize: 50));
-            } else if (count > 10) {
-                       print("CCCC");
-              return Text("PIYUSH", style: TextStyle(fontSize: 40));
-            }
-            {
-                       print("DDDD");
-              return Text("PIYUSH", style: TextStyle(fontSize: 30));
-            }
-          })),
+          )
         ],
       ),
     );
   }
 }
+
+
+
+
+
+
+

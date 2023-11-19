@@ -1,0 +1,118 @@
+class User {
+  String name;
+  String? phoneNumber;
+
+  User({
+    required this.name 
+  });
+}
+
+final UserController userController = Get.put(UserController());
+
+
+import 'package:event_app/model/User.dart';
+import 'package:get/get.dart';
+
+// or any action on you
+class UserController extends GetxController {
+  Rx<User> user = User(name: "").obs; // obs ---> if your valu change we will take action
+ 
+  changePhoneNumber(String? phoneNUmber) {
+    user.update((val) {
+      val?.phoneNumber = phoneNUmber;
+    });
+  }
+
+}
+
+
+
+
+/*
+EXTRA CODE FOR GETX
+*/
+
+        //  Builder(builder: ((context) {
+        //     for (int i = 0; i < k.length; i++) {
+        //       if (k[i] % 2 == 0) count++;
+        //     }
+
+        //     if (count <= 5) {
+        //       print("AAAA");
+        //       return Text("PIYUSH", style: TextStyle(fontSize: 60));
+        //     } else if (count > 5 && count <= 10) {
+        //                print("BBB");
+        //       return Text("PIYUSH", style: TextStyle(fontSize: 50));
+        //     } else if (count > 10) {
+        //                print("CCCC");
+        //       return Text("PIYUSH", style: TextStyle(fontSize: 40));
+        //     }
+        //     {
+        //                print("DDDD");
+        //       return Text("PIYUSH", style: TextStyle(fontSize: 30));
+        //     }
+        //   })),
+
+
+
+/*
+EXTRA CODE FOR GETX
+*/
+
+
+
+  Obx(() {
+              if (userController.user.value.phoneNumber == null)
+                return Text("Please enter number",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 30));
+
+              return Text(userController.user.value.phoneNumber ?? "",
+                  style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15));
+            }),
+
+            SizedBox(height: 20),
+            CustomTextField(
+              hintText: "Enter Phone Number",
+              initialValue: "",
+              width: double.infinity,
+              onChange: (value) {
+                // getX Controller --> user obs --> observable
+                userController.changePhoneNumber(value);
+                // action perform
+                print(userController.user.value.phoneNumber);
+              },
+            ),
+            SizedBox(height: 20),
+            CustomTextButton(
+                text: "Terms And Condition",
+                isPostIcon: true,
+                margin: EdgeInsets.only(bottom: 8),
+                fontSize: 16,
+                iconSize: 22,
+                onTap: () async {
+                  const url = 'https://www.geeksforgeeks.org/';
+                  if (await canLaunch(url)) {
+                    await launch(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                }),
+            SizedBox(height: 20),
+            CustomButton(
+              onTap: () {
+                var p =
+                    validatePhoneNumber(userController.user.value.phoneNumber);
+                if (p != null) {
+                  showToast(msg: p);
+                  return;
+                }
+                Get.offNamed(Urlconstants.authUrl);
+              },
+              containerColor: Colors.transparent,
+              shadowColor: ColorConstants.darkRed,
+              labelTextWeight: FontWeight.bold,
+              labelText: "Logout",
+              isLoading: isLgOutButtonLoading,
+            )
+
