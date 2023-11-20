@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         builder: (_, child) {
           return GetMaterialApp(
+            theme: ThemeData(fontFamily: 'Poppins'),
             title: StringConstants.appName,
             debugShowCheckedModeBanner: false,
             initialRoute: Urlconstants.authUrl,

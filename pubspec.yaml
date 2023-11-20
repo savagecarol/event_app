@@ -67,6 +67,17 @@ flutter:
   assets:
     - assets/icon/
   #   - images/a_dot_ham.jpeg
+  fonts:
+    - family: Poppins
+      fonts: 
+        - asset: fonts/Poppins/Poppins-Regular.ttf
+        - asset: fonts/Poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: fonts/Poppins/Poppins-ExtraBold.ttf
+          weight: 900
+        - asset: fonts/Poppins/Poppins-SemiBold.ttf
+          weight: 800
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
