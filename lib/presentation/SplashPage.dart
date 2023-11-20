@@ -1,6 +1,8 @@
+import 'package:connect/presentation/pages/Chat.dart';
 import 'package:connect/presentation/pages/home_pages.dart';
 import 'package:connect/presentation/pages/post.dart';
 import 'package:connect/presentation/pages/profile.dart';
+import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,6 +17,8 @@ class SplashPage extends StatelessWidget {
       case 1:
         return Post();
       case 2:
+        return Chat();
+      case 3:
         return Profile();
       default:
         return HomePage();
@@ -24,6 +28,8 @@ class SplashPage extends StatelessWidget {
   _getBottomBar() {
     print(globalController.globalvariable.value.counter);
     return Card(
+      color: ColorConstants.red,
+      elevation: 100,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       margin: const EdgeInsets.all(0),
       child: Row(
@@ -31,7 +37,8 @@ class SplashPage extends StatelessWidget {
         children: <Widget>[
           _getBottomBarItem(index: 0, icontab: Icons.home),
           _getBottomBarItem(index: 1, icontab: Icons.add),
-          _getBottomBarItem(index: 2, icontab: Icons.no_accounts_outlined),
+          _getBottomBarItem(index: 2, icontab: Icons.chat),
+          _getBottomBarItem(index: 3, icontab: Icons.account_box),
         ],
       ),
     );
@@ -54,7 +61,7 @@ class SplashPage extends StatelessWidget {
               padding: EdgeInsets.all(5.h),
               decoration: BoxDecoration(
                 color: globalController.globalvariable.value.counter == index
-                    ? Colors.black
+                    ? Colors.white
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(5.r),
               ),
@@ -62,8 +69,8 @@ class SplashPage extends StatelessWidget {
                 child: Icon(
                   icontab,
                   color: globalController.globalvariable.value.counter == index
-                      ? Colors.white
-                      : Colors.black38,
+                      ? Colors.black
+                      : Colors.white,
                   size: 32,
                 ),
               ),
