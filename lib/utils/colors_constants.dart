@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 */ 
 
 class ColorConstants{
+
 static MaterialColor appRed = Color.fromRGBO(207,21,60,1) as MaterialColor;
 static Color iconRed = const Color.fromRGBO(207,21,60,1);
 static Color red = const Color.fromRGBO(209,49,60,1);

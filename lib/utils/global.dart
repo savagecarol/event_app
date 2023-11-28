@@ -73,15 +73,15 @@ List<Message> listDocument = [
 
 
 List<Post> postList = [
-    Post(
-        id: "121212",
-        userName: "@savageCarol",
-        name : "Kartikeya Sharma" , 
-        eventTime : DateTime.now() , 
-        post : "dsfdsfdsf nsadjkasdn kjnadskjsnad nsadksandkja dskfmdkslf dknfdsfms",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
-        images: ["https://buffer.com/library/content/images/2023/10/free-images.jpg" , "https://buffer.com/library/content/images/2023/10/free-images.jpg"]
-       ),
+    // Post(
+    //     id: "121212",
+    //     userName: "@savageCarol",
+    //     name : "Kartikeya Sharma" , 
+    //     eventTime : DateTime.now() , 
+    //     post : "dsfdsfdsf nsadjkasdn kjnadskjsnad nsadksandkja dskfmdkslf dknfdsfms",
+    //     tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+    //     images: ["https://buffer.com/library/content/images/2023/10/free-images.jpg" , "https://buffer.com/library/content/images/2023/10/free-images.jpg"]
+    //    ),
 
         Post(
         id: "121212",

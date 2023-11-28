@@ -26,7 +26,7 @@ class CustomPostCard extends StatelessWidget {
           image: NetworkImage(
             post.images[index]
           ),
-          fit: BoxFit.fill
+          fit: BoxFit.contain
           
         )),
         margin: EdgeInsets.symmetric(horizontal: 8.w),
@@ -36,17 +36,28 @@ class CustomPostCard extends StatelessWidget {
     return GestureDetector(
         onTap: () {},
         child: Container(
+          height: 200.h,
            margin: EdgeInsets.only(bottom: 16.h),
           padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 12.w),
           decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                    color: ColorConstants.grey1, //New
-                    blurRadius: 8.h,
-                    offset: Offset(0, 2.h))
-              ],
+          
+              // boxShadow: [
+              //   BoxShadow(
+              //       color: ColorConstants.grey1, //New
+              //       blurRadius: 8.h,
+              //       offset: Offset(0, 2.h))
+              // ],
               color: ColorConstants.white,
-              borderRadius: BorderRadius.all(Radius.circular(8.r))),
+                image: DecorationImage(
+          image: NetworkImage(
+             "https://buffer.com/library/content/images/2023/10/free-images.jpg"
+          ),
+          fit: BoxFit.fill
+          
+        )),
+        
+              
+              // borderRadius: BorderRadius.all(Radius.circular(8.r))),
           child: Column(
             children: [
               Row(
@@ -68,7 +79,7 @@ class CustomPostCard extends StatelessWidget {
                         children: [
                           Container(
                               margin: EdgeInsets.only(left: 4.w),
-                              child: customBlackText(post.userName, 14.sp,
+                              child: customWhiteText(post.userName, 14.sp,
                                   fontWeight: FontWeight.w500)),
                                     SizedBox(
           height: 1.h,
@@ -76,7 +87,7 @@ class CustomPostCard extends StatelessWidget {
 
                           Container(
                               margin: EdgeInsets.only(left: 4.w),
-                              child: customBlackText(post.name, 12.sp,
+                              child: customWhiteText(post.name, 12.sp,
                                   fontWeight: FontWeight.w500)),
                                   
                         ],
