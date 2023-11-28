@@ -1,16 +1,13 @@
+import 'package:connect/presentation/components/custom_button.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
+import 'package:connect/presentation/components/custom_text_button.dart';
 import 'package:connect/utils/colors_constants.dart';
+import 'package:connect/utils/global.dart';
+import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Profile extends StatelessWidget {
-   
-   List<String> x = ["CRICKET" , "BADMINTON" 
-    , "MUSIC"  , 
-    "SPORTS" 
-    , "CHESS" , "DJ" , "ART" , "DRAWING" , "SKETCHING" , 
-    "COFFEE" ];
-
   Widget profileBox() {
     return Container(
       height: 100.h,
@@ -49,7 +46,7 @@ class Profile extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  customWhiteText("Kartikeya", 24.sp),
+                  customWhiteText("Kartikeya", 18.sp , fontWeight: FontWeight.bold),
                   customWhiteText("+917830980280", 16.sp),
                 ],
               ),
@@ -68,8 +65,48 @@ class Profile extends StatelessWidget {
         children: [
           profileBox(),
           Padding(
-            padding: EdgeInsets.all(16.h),
-            child: chipWrap(x, Colors.grey.shade300, Colors.black, 12.h , fontWeight: FontWeight.w800))
+            padding:  EdgeInsets.all(16.w),
+            child: Column(
+            
+              children: [
+            
+                chipWrap(chipList, Colors.grey.shade300, Colors.black, 12.h,
+                  fontWeight: FontWeight.w800),
+               
+                
+                CustomTextButton(text: "Authorization", 
+                onTap: () {} ,
+                margin: EdgeInsets.symmetric(vertical: 16.h)
+                ,
+                 isPostIcon: true , 
+                 iconSize: 18.h,),
+               
+                CustomTextButton(text: "Terms And Condition",
+                 onTap: () {} , 
+                 isPostIcon: true ,
+                  iconSize: 18.h,
+                 margin: EdgeInsets.only(bottom: 16.h)),
+
+                  SizedBox(height: 8.h,),
+
+                CustomButton(
+                  
+                  onTap: () {
+                  },
+                  containerColor: ColorConstants.white,
+                  shadowColor: ColorConstants.white,
+                  labelText: "Log Out ",
+                  visiblepostIcon: true,
+                  labelTextWeight: FontWeight.w700,
+                  postIcon: Icons.arrow_forward_rounded,
+                  sizelabelText: 24.sp,
+                  postIconSize: 24.sp,
+                ),
+              ],
+            ),
+          ),
+         
+     
         ],
       ),
     );

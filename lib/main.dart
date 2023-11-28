@@ -1,5 +1,8 @@
-import 'package:connect/presentation/Auth.dart';
-import 'package:connect/presentation/SplashPage.dart';
+import 'package:connect/presentation/auth.dart';
+import 'package:connect/presentation/app_start.dart';
+import 'package:connect/presentation/otp.dart';
+import 'package:connect/presentation/splash_page.dart';
+import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/string_constants.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +27,23 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             title: StringConstants.appName,
             debugShowCheckedModeBanner: false,
-            initialRoute: Urlconstants.authUrl,
+            initialRoute: Urlconstants.firstPageUrl,
+            theme: ThemeData(
+              accentColor: ColorConstants.accentRed,
+              scaffoldBackgroundColor: ColorConstants.white,
+              appBarTheme:   AppBarTheme(
+                  backgroundColor: ColorConstants.iconRed,
+                  elevation: 0  ),
+            ),
             getPages: [
+              GetPage(
+                name: Urlconstants.otpUrl,
+                page: () => Otp(),
+              ),
+              GetPage(
+                name: Urlconstants.appStartUrl,
+                page: () => AppStart(),
+              ),
               GetPage(
                 name: Urlconstants.firstPageUrl,
                 page: () => SplashPage(),

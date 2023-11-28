@@ -31,7 +31,7 @@ Widget customBlackText(String text, double fontSize,
     style: TextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
-        color: ColorConstants.black),
+        color: ColorConstants.fontDarkColor),
   );
 }
 
@@ -60,14 +60,14 @@ Widget chips(String text, Color color  ,Color textColor , double fontSize,{FontW
     margin: EdgeInsets.only(top: 8.h),
     decoration: BoxDecoration(
     color: color,
-    borderRadius: BorderRadius.all( Radius.circular(24.r)),
+    borderRadius: BorderRadius.all( Radius.circular(5.r)),
     boxShadow: [BoxShadow(
           color: color.withOpacity(.1), //New
           blurRadius: 2.h,
           offset: Offset(0, 2.h))
     ],
     ),
-    padding: EdgeInsets.symmetric(vertical: 8.h, horizontal: 18.w),
+    padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 12.w),
     child:
      (textColor == Colors.black) ? 
       customBlackText(text, fontSize , fontWeight: fontWeight):

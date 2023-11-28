@@ -1,6 +1,7 @@
+import 'package:connect/model/global_variable.dart';
 import 'package:connect/presentation/pages/Chat.dart';
 import 'package:connect/presentation/pages/home_pages.dart';
-import 'package:connect/presentation/pages/post.dart';
+import 'package:connect/presentation/pages/search.dart';
 import 'package:connect/presentation/pages/profile.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
@@ -9,13 +10,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class SplashPage extends StatelessWidget {
+  
   _getBody() {
-    print(globalController.globalvariable.value.counter);
     switch (globalController.globalvariable.value.counter) {
       case 0:
         return HomePage();
       case 1:
-        return Post();
+        return Search();
       case 2:
         return Chat();
       case 3:
@@ -27,16 +28,23 @@ class SplashPage extends StatelessWidget {
 
   _getBottomBar() {
     print(globalController.globalvariable.value.counter);
-    return Card(
-      color: ColorConstants.red,
-      elevation: 100,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-      margin: const EdgeInsets.all(0),
+    return Container(
+       decoration: BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+                color: ColorConstants.lightRed, //New
+                blurRadius: 8.h,
+                offset: Offset(0, 2.h))
+          ],
+          shape: BoxShape.rectangle,
+          color: ColorConstants.red,
+          borderRadius: BorderRadius.all( Radius.circular(24.r))),
+      margin:  EdgeInsets.only(bottom: 12.h , left: 16.w , right:16.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
           _getBottomBarItem(index: 0, icontab: Icons.home),
-          _getBottomBarItem(index: 1, icontab: Icons.add),
+          _getBottomBarItem(index: 1, icontab: Icons.search),
           _getBottomBarItem(index: 2, icontab: Icons.chat),
           _getBottomBarItem(index: 3, icontab: Icons.account_box),
         ],
@@ -53,7 +61,7 @@ class SplashPage extends StatelessWidget {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 60.h,
+        height: 54.h,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -63,7 +71,7 @@ class SplashPage extends StatelessWidget {
                 color: globalController.globalvariable.value.counter == index
                     ? Colors.white
                     : Colors.transparent,
-                borderRadius: BorderRadius.circular(5.r),
+                borderRadius: BorderRadius.circular(24.r),
               ),
               child: Center(
                 child: Icon(
@@ -71,7 +79,7 @@ class SplashPage extends StatelessWidget {
                   color: globalController.globalvariable.value.counter == index
                       ? Colors.black
                       : Colors.white,
-                  size: 32,
+                  size: 22.h,
                 ),
               ),
             ),
@@ -88,7 +96,9 @@ class SplashPage extends StatelessWidget {
         backgroundColor: Colors.white,
         body: Obx(() {
           return Column(
-            children: <Widget>[Expanded(child: _getBody()), _getBottomBar()],
+            children: <Widget>[
+           Expanded(child: _getBody()),
+               _getBottomBar()],
           );
         }),
         resizeToAvoidBottomInset: false,
