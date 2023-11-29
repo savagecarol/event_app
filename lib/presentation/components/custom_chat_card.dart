@@ -3,8 +3,6 @@ import 'dart:ffi';
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomChatCard extends StatelessWidget {
@@ -24,7 +22,8 @@ class CustomChatCard extends StatelessWidget {
       required this.message,
       required this.isRead,
       required this.time,
-     });
+  });
+  
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -34,9 +33,8 @@ class CustomChatCard extends StatelessWidget {
         decoration: BoxDecoration(
             border: Border(
           bottom: BorderSide(
-            //                    <--- top side
-            color: ColorConstants.black.withOpacity(.5),
-            width: 1.0,
+            color: ColorConstants.white.withOpacity(.5),
+            width: .8.h,
           ),
         )),
         child: Row(
@@ -55,21 +53,21 @@ class CustomChatCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  customBlackText(name, 16.h,
+                  customWhiteText(name, 16.h,
                       fontWeight: FontWeight.w600),
                   SizedBox(
                     height: 2.h,
                   ),
-                  customBlackText(message, 14.h,
+                  customWhiteText(message, 14.h,
                       fontWeight: FontWeight.w400),
                 ],
               ),
             ),
+
             Container(
                 margin: EdgeInsets.only(left: 8.w),
                 child: Row(
                   children: [
-    
                     Visibility(
                       visible: isRead,
                       child: Icon(
@@ -82,7 +80,7 @@ class CustomChatCard extends StatelessWidget {
                     SizedBox(
                       width: 1.h,
                     ),
-                    customBlackText(time, 14.h, fontWeight: FontWeight.w700),
+                    customWhiteText(time, 14.h, fontWeight: FontWeight.w700),
                   ],
                 ))
           ],

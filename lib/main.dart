@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
             initialRoute: Urlconstants.firstPageUrl,
             theme: ThemeData(
               accentColor: ColorConstants.accentRed,
-              scaffoldBackgroundColor: ColorConstants.white,
+              scaffoldBackgroundColor: ColorConstants.black,
               appBarTheme:   AppBarTheme(
                   backgroundColor: ColorConstants.iconRed,
                   elevation: 0  ),

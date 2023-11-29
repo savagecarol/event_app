@@ -16,7 +16,7 @@ static Color darkRed = const Color.fromRGBO(165,0,0,1);
 static Color darkestRed = const Color.fromRGBO(102,0,0,1);
 static Color accentRed = const Color.fromRGBO(255,209,210,1);
 static Color white =  Colors.white;
-static Color black = Colors.black;
+static Color black = const Color.fromRGBO(38, 38, 38,1);
 static Color grey1 = Colors.grey.shade400;
 static Color fontDarkColor = Colors.grey.shade800;
 }

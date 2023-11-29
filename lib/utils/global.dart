@@ -2,7 +2,6 @@ import 'package:connect/model/message.dart';
 import 'package:connect/model/action/GlobalController.dart';
 import 'package:connect/model/parent_tag.dart';
 import 'package:connect/model/post.dart';
-import 'package:connect/model/tag.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -73,27 +72,87 @@ List<Message> listDocument = [
 
 
 List<Post> postList = [
-    // Post(
-    //     id: "121212",
-    //     userName: "@savageCarol",
-    //     name : "Kartikeya Sharma" , 
-    //     eventTime : DateTime.now() , 
-    //     post : "dsfdsfdsf nsadjkasdn kjnadskjsnad nsadksandkja dskfmdkslf dknfdsfms",
-    //     tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
-    //     images: ["https://buffer.com/library/content/images/2023/10/free-images.jpg" , "https://buffer.com/library/content/images/2023/10/free-images.jpg"]
-    //    ),
+        Post(
+        id: "121212",
+        userName: "@savageCarol",
+        name : "Kartikeya Sharma" , 
+        eventTime : DateTime.now() , 
+        title : "lets play game ",
+        description: "",
+        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
+       ),
 
         Post(
         id: "121212",
         userName: "@savageCarol",
         name : "Kartikeya Sharma" , 
         eventTime : DateTime.now() , 
-        post : "lets play game ",
+        title : "lets play game ",
+        description: "",
         tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
-        images: []
+        images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
+       ),
+
+        Post(
+        id: "121212",
+        userName: "@savageCarol",
+        name : "Kartikeya Sharma" , 
+        eventTime : DateTime.now() , 
+        title : "lets play game ",
+        description: "",
+        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        images: ["https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg"]
        ),
   ];
 
+
+List<ParentTag> popularList = [
+
+      ParentTag(
+        id: "121212",
+        name : "Sports" , 
+        image: "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+        popular: true
+       ),
+
+      ParentTag(
+        id: "121212",
+        name : "Online" , 
+        image: "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+        popular: true
+       ),
+
+
+      ParentTag(
+        id: "121212",
+        name : "Health" , 
+        image: "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+        popular: true
+       ),
+
+      ParentTag(
+        id: "121212",
+        name : "Health" , 
+        image: "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+        popular: true
+       ),
+
+      ParentTag(
+        id: "121212",
+        name : "Health" , 
+        image: "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+        popular: true
+       ),
+
+      ParentTag(
+        id: "121212",
+        name : "Health" , 
+        image: "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+        popular: true
+       ),
+
+  ];
 
 
     List<String> chipList = [
@@ -107,4 +166,66 @@ List<Post> postList = [
     "DRAWING",
     "SKETCHING",
     "COFFEE"
+  ];
+
+
+  
+
+
+List<Post> trendingList = [
+        Post(
+        id: "121212",
+        userName: "@savageCarol",
+        name : "Kartikeya Sharma" , 
+        eventTime : DateTime.now() , 
+        title : "lets play game ",
+        description: "",
+        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
+       ),
+
+        Post(
+        id: "121212",
+        userName: "@savageCarol",
+        name : "Kartikeya Sharma" , 
+        eventTime : DateTime.now() , 
+        title : "lets play game ",
+        description: "",
+        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
+       ),
+
+        Post(
+        id: "121212",
+        userName: "@savageCarol",
+        name : "Kartikeya Sharma" , 
+        eventTime : DateTime.now() , 
+        title : "lets play game ",
+        description: "",
+        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        images: ["https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg"]
+       ),
+
+          Post(
+        id: "121212",
+        userName: "@savageCarol",
+        name : "Kartikeya Sharma" , 
+        eventTime : DateTime.now() , 
+        title : "lets play game ",
+        description: "",
+        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
+       ),  
+
+
+          Post(
+        id: "121212",
+        userName: "@savageCarol",
+        name : "Kartikeya Sharma" , 
+        eventTime : DateTime.now() , 
+        title : "lets play game ",
+        description: "",
+        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
+       ),
   ];

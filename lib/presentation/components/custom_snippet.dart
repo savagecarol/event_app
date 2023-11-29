@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,7 @@ Widget CustomImage(
       shape: shape,
       image: DecorationImage(
         image: isNetwork
-            ? NetworkImage(imageUrl)
+            ? CachedNetworkImageProvider(imageUrl)
             : AssetImage(imageUrl) as ImageProvider,
         fit: boxFit,
       ),

@@ -1,5 +1,6 @@
 import 'package:connect/model/global_variable.dart';
 import 'package:connect/presentation/pages/Chat.dart';
+import 'package:connect/presentation/pages/add_post.dart';
 import 'package:connect/presentation/pages/home_pages.dart';
 import 'package:connect/presentation/pages/search.dart';
 import 'package:connect/presentation/pages/profile.dart';
@@ -20,6 +21,8 @@ class SplashPage extends StatelessWidget {
       case 2:
         return Chat();
       case 3:
+        return AddPost();
+      case 4:
         return Profile();
       default:
         return HomePage();
@@ -30,12 +33,6 @@ class SplashPage extends StatelessWidget {
     print(globalController.globalvariable.value.counter);
     return Container(
        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-                color: ColorConstants.lightRed, //New
-                blurRadius: 8.h,
-                offset: Offset(0, 2.h))
-          ],
           shape: BoxShape.rectangle,
           color: ColorConstants.red,
           borderRadius: BorderRadius.all( Radius.circular(24.r))),
@@ -45,8 +42,9 @@ class SplashPage extends StatelessWidget {
         children: <Widget>[
           _getBottomBarItem(index: 0, icontab: Icons.home),
           _getBottomBarItem(index: 1, icontab: Icons.search),
-          _getBottomBarItem(index: 2, icontab: Icons.chat),
-          _getBottomBarItem(index: 3, icontab: Icons.account_box),
+          _getBottomBarItem(index: 2, icontab: Icons.add),
+          _getBottomBarItem(index: 3, icontab: Icons.chat),
+          _getBottomBarItem(index: 4, icontab: Icons.account_box),
         ],
       ),
     );
@@ -93,7 +91,7 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: ColorConstants.black,
         body: Obx(() {
           return Column(
             children: <Widget>[

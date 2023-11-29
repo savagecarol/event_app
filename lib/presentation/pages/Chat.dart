@@ -15,8 +15,8 @@ class Chat extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        backgroundColor: ColorConstants.white,
-        title:customBlackText("Chat", 32.h, fontWeight: FontWeight.bold),
+        backgroundColor: ColorConstants.black,
+        title:customWhiteText("Chat", 32.h, fontWeight: FontWeight.bold),
         ),
       body: SingleChildScrollView(
         child: Padding(

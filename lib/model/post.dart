@@ -4,7 +4,8 @@ class Post {
   String id;
   String userName;
   String name;
-  String post;
+  String title;
+  String description;
   DateTime eventTime;
   List<String> tagList;
   List<String> images;
@@ -12,8 +13,9 @@ class Post {
       {required this.id,
       required this.userName,
       required this.name,
-      required this.post,
+      required this.title,
       required this.eventTime,
       required this.tagList,
-      required this.images});
+      required this.images,
+      required this.description});
 }
