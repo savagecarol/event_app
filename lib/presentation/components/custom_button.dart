@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomButton extends StatelessWidget {
   final IconData postIcon;
@@ -32,17 +33,9 @@ class CustomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-            color: containerColor,
-            border: Border.all(
-              color: Colors.black,
-              width: 2,
-            ),
-            boxShadow: [
-              BoxShadow(
-                  color: shadowColor.withOpacity(.1),
-                  blurRadius: 3,
-                  offset: Offset(0, 5))
-            ]),
+             color: containerColor,
+          borderRadius: BorderRadius.all( Radius.circular(5.r))),
+           
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: Center(

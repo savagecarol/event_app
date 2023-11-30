@@ -36,15 +36,14 @@ class Chat extends StatelessWidget {
                     displayName: "Kartikeya",
                     phoneNumber: "7830980280",
                     userId: 12222,
-                    friendId: 1231)
+                    friendId: 1231) ,
+                    transition: Transition.rightToLeft
                     );    
             },
           )
           ],
           ),
         ),
-        
-    
       ),
     );
   }

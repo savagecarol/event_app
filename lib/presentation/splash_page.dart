@@ -1,4 +1,3 @@
-import 'package:connect/model/global_variable.dart';
 import 'package:connect/presentation/pages/Chat.dart';
 import 'package:connect/presentation/pages/add_post.dart';
 import 'package:connect/presentation/pages/home_pages.dart';
@@ -19,9 +18,9 @@ class SplashPage extends StatelessWidget {
       case 1:
         return Search();
       case 2:
-        return Chat();
-      case 3:
         return AddPost();
+      case 3:
+        return Chat();
       case 4:
         return Profile();
       default:

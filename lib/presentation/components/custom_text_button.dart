@@ -30,12 +30,6 @@ class CustomTextButton extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 8.h , horizontal: 12.w),
           decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-                color: ColorConstants.grey1, //New
-                blurRadius: 8.h,
-                offset: Offset(0, 2.h))
-          ],
           shape: BoxShape.rectangle,
           color: ColorConstants.grey1,
           borderRadius: BorderRadius.all( Radius.circular(8.r))),

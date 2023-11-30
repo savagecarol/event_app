@@ -2,6 +2,7 @@ import 'package:connect/presentation/auth.dart';
 import 'package:connect/presentation/app_start.dart';
 import 'package:connect/presentation/otp.dart';
 import 'package:connect/presentation/splash_page.dart';
+import 'package:connect/torch/torch.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/string_constants.dart';
 import 'package:connect/utils/url_constants.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             title: StringConstants.appName,
             debugShowCheckedModeBanner: false,
-            initialRoute: Urlconstants.firstPageUrl,
+            initialRoute: Urlconstants.torchUrl,
             theme: ThemeData(
               accentColor: ColorConstants.accentRed,
               scaffoldBackgroundColor: ColorConstants.black,
@@ -47,10 +48,16 @@ class MyApp extends StatelessWidget {
               GetPage(
                 name: Urlconstants.firstPageUrl,
                 page: () => SplashPage(),
+                transition: Transition.downToUp 
               ),
               GetPage(
                 name: Urlconstants.authUrl,
                 page: () => Auth(),
+              ),
+               GetPage(
+                name: Urlconstants.torchUrl,
+                page: () => const Torch(),
+                transition: Transition.circularReveal
               ),
             ],
           );

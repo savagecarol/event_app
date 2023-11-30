@@ -32,11 +32,8 @@ class _SearchState extends State<Search> {
             mainAxisAlignment: MainAxisAlignment.end,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
                              customWhiteText(trendingList[index].title, 18.sp,
                               fontWeight: FontWeight.w600)
-              
-
             ],
           ),
         ),

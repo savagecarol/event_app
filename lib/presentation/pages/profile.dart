@@ -3,7 +3,6 @@ import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/presentation/components/custom_text_button.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
-import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,12 +12,6 @@ class Profile extends StatelessWidget {
       height: 100.h,
       width: ScreenUtil.defaultSize.width.spMax,
       decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-                color: ColorConstants.lightRed, //New
-                blurRadius: 8.h,
-                offset: Offset(0, 4.h))
-          ],
           shape: BoxShape.rectangle,
           color: ColorConstants.red,
           borderRadius: BorderRadius.only(
