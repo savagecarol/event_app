@@ -85,6 +85,7 @@ class Profile extends StatelessWidget {
                 CustomButton(         
                   onTap: () {
                   },
+                  isLoading: true,
                   containerColor: ColorConstants.white,
                   shadowColor: ColorConstants.white,
                   labelText: "Log Out ",

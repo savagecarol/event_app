@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             title: StringConstants.appName,
             debugShowCheckedModeBanner: false,
-            initialRoute: Urlconstants.torchUrl,
+            initialRoute: Urlconstants.appStartUrl,
             theme: ThemeData(
               accentColor: ColorConstants.accentRed,
               scaffoldBackgroundColor: ColorConstants.black,

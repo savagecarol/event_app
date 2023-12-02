@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
+
+import '../../utils/string_constants.dart';
+
 
 class CustomButton extends StatelessWidget {
   final IconData postIcon;
@@ -59,10 +63,10 @@ class CustomButton extends StatelessWidget {
                       ),
                     ],
                   )
-                : const SizedBox(
+                :  SizedBox(
                     height: 20,
                     width: 20,
-                    child: CircularProgressIndicator(color: Colors.black),
+                    child: LottieBuilder.asset(StringConstants.loader),
                   ),
           ),
         ),
