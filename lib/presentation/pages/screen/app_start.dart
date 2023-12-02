@@ -16,12 +16,10 @@ class AppStart extends StatefulWidget {
 }
 
 class _AppStartState extends State<AppStart> {
-
-    _isLogin() async {
+  _isLogin() async {
     await Future.delayed(Duration(seconds: 2));
     Get.offNamed(Urlconstants.authUrl);
   }
-
 
   @override
   void initState() {
@@ -29,11 +27,9 @@ class _AppStartState extends State<AppStart> {
     _isLogin();
   }
 
-
   @override
-  Widget build(BuildContext context) {    
-    return SafeArea(
-        child: Scaffold(
+  Widget build(BuildContext context) {
+    return customScaffold(
             backgroundColor: ColorConstants.white,
             body: Column(
               children: [
@@ -45,17 +41,15 @@ class _AppStartState extends State<AppStart> {
                     width: 128.w,
                   )),
                 ),
-                 Center(
-                child: CustomImage(
-                  boxFit: BoxFit.contain,
-                  isNetwork: false,
-                  imageUrl: StringConstants.appIcon,
-                  height: 128.h,
-                  width: 128.w,
-                  shape: BoxShape.rectangle
-
-                ))
+                Center(
+                    child: customImage(
+                        boxFit: BoxFit.contain,
+                        isNetwork: false,
+                        imageUrl: StringConstants.appIcon,
+                        height: 128.h,
+                        width: 128.w,
+                        shape: BoxShape.rectangle))
               ],
-            )));
+            ));
   }
 }

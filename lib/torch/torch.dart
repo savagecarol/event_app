@@ -59,8 +59,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return customScaffold(
             appBar: AppBar(
               backgroundColor: ColorConstants.white,
               title: Row(
@@ -70,15 +69,17 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                     if (globalController.globalvariable.value.partyAnimation) {
                       return Container();
                     }
-                    return GestureDetector(
-                        onTap: () {
+                    return Container(
+                      decoration: BoxDecoration(
+                          color: ColorConstants.amberColor,
+                          shape: BoxShape.circle),
+                      child: CloseButton(
+                        color: ColorConstants.red,
+                        onPressed: () {
                           Get.toNamed(Urlconstants.firstPageUrl);
                         },
-                        child: Icon(
-                          Icons.close,
-                          color: ColorConstants.darkRed,
-                          size: 24.h,
-                        ));
+                      ),
+                    );
                   })
                 ],
               ),
@@ -132,6 +133,6 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                   ),
                 ],
               ));
-            })));
+            }));
   }
 }

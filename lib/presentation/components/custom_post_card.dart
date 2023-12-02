@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slide_countdown/slide_countdown.dart';
 
-
 class CustomPostCard extends StatelessWidget {
   Post post;
   CustomPostCard({super.key, required this.post});
@@ -40,7 +39,7 @@ class CustomPostCard extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          CustomImage(
+                        customImage(
                               imageUrl:
                                   "https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg",
                               height: 28.h,
@@ -66,21 +65,18 @@ class CustomPostCard extends StatelessWidget {
                           )
                         ],
                       ),
-                      SlideCountdown(
-                        duration: defaultDuration,
-                        countUp: false,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.all(Radius.circular(5.r)),
-                        ),
-                      ),
+                      // SlideCountdown(
+                      //   duration: defaultDuration,
+                      //   countUp: false,
+                      //   decoration: BoxDecoration(
+                      //     color: Colors.black,
+                      //     borderRadius: BorderRadius.all(Radius.circular(5.r)),
+                      //   ),
+                      // ),
                     ],
                   ),
                    customWhiteText(post.title, 28.sp,
                               fontWeight: FontWeight.w600)
-              
-                 
-               
                 ],
               ),
             ),

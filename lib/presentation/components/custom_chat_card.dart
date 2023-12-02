@@ -41,7 +41,7 @@ class CustomChatCard extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.only(right: 8.w),
-              child: CustomImage(
+              child: customImage(
                   imageUrl: image ,
                   height: 32.h,
                   width: 32.w,

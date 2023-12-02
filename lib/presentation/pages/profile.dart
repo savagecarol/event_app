@@ -25,7 +25,7 @@ class Profile extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.only(right: 10.h),
-              child: CustomImage(
+              child: customImage(
                   imageUrl:
                       "https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg",
                   height: 60.h,
@@ -82,8 +82,7 @@ class Profile extends StatelessWidget {
 
                   SizedBox(height: 8.h,),
 
-                CustomButton(
-                  
+                CustomButton(         
                   onTap: () {
                   },
                   containerColor: ColorConstants.white,

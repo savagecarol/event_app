@@ -27,8 +27,7 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return customScaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
           leading: Builder(
@@ -93,7 +92,6 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           ],
         ),
-      ),
     );
   }
 }

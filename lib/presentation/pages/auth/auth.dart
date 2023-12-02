@@ -8,21 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class Otp extends StatelessWidget {
+class Auth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {
-              Get.offAllNamed(Urlconstants.authUrl);
-            },
-            icon: Icon(Icons.arrow_back),
-          ),
-          title:
-              customWhiteText("Enter Otp", 18.h, fontWeight: FontWeight.bold),
-        ),
+    return customScaffold(
         backgroundColor: ColorConstants.iconRed,
         body: SingleChildScrollView(
           child: Padding(
@@ -30,40 +19,41 @@ class Otp extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                customWhiteText("Enter your Phone Number", 18.h,
+                    fontWeight: FontWeight.bold),
+                SizedBox(
+                  height: 8.h,
+                ),
+                customWhiteText(
+                    "We Will Send you 4 digit verification code", 14.h,
+                    fontWeight: FontWeight.w600),
                 SizedBox(
                   height: 24.h,
                 ),
                 CustomTextField(
                     hintText: "",
                     initialValue: "",
-                    width: 100,
                     textInputType: TextInputType.number,
+                    width: 100,
                     onChange: (Value) {}),
                 SizedBox(
                   height: 16.h,
                 ),
                 CustomButton(
                   onTap: () {
-                         Get.offAllNamed(Urlconstants.firstPageUrl);
+                    Get.toNamed(Urlconstants.otpUrl);
                   },
                   containerColor: ColorConstants.white,
                   shadowColor: ColorConstants.white,
-                  labelText: "Verify Otp ",
+                  labelText: "Send Otp ",
                   visiblepostIcon: true,
                   labelTextWeight: FontWeight.w700,
                   postIcon: Icons.arrow_forward_rounded,
                   sizelabelText: 24.sp,
                   postIconSize: 24.sp,
                 ),
-                SizedBox(
-                  height: 8.h,
-                ),
-                InkWell(
-                    child: customWhiteText(
-                        "Send Verification Code Again?", 12.h,
-                        fontWeight: FontWeight.w400)),
                 Center(
-                  child: CustomImage(
+                  child: customImage(
                       boxFit: BoxFit.contain,
                       isNetwork: false,
                       imageUrl: StringConstants.appIcon2,
@@ -75,7 +65,6 @@ class Otp extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 }

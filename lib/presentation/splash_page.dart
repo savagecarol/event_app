@@ -1,3 +1,4 @@
+import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/presentation/pages/Chat.dart';
 import 'package:connect/presentation/pages/add_post.dart';
 import 'package:connect/presentation/pages/home_pages.dart';
@@ -10,7 +11,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class SplashPage extends StatelessWidget {
-  
   _getBody() {
     switch (globalController.globalvariable.value.counter) {
       case 0:
@@ -31,11 +31,11 @@ class SplashPage extends StatelessWidget {
   _getBottomBar() {
     print(globalController.globalvariable.value.counter);
     return Container(
-       decoration: BoxDecoration(
+      decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           color: ColorConstants.red,
-          borderRadius: BorderRadius.all( Radius.circular(24.r))),
-      margin:  EdgeInsets.only(bottom: 12.h , left: 16.w , right:16.w),
+          borderRadius: BorderRadius.all(Radius.circular(24.r))),
+      margin: EdgeInsets.only(bottom: 12.h, left: 16.w, right: 16.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[
@@ -88,18 +88,14 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: ColorConstants.black,
+    return customScaffold(
         body: Obx(() {
           return Column(
-            children: <Widget>[
-           Expanded(child: _getBody()),
-               _getBottomBar()],
+            children: <Widget>[Expanded(child: _getBody()), _getBottomBar()],
           );
         }),
-        resizeToAvoidBottomInset: false,
-      ),
+        backgroundColor: ColorConstants.black,
     );
+
   }
 }

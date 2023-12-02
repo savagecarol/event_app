@@ -1,6 +1,6 @@
-import 'package:connect/presentation/auth.dart';
-import 'package:connect/presentation/app_start.dart';
-import 'package:connect/presentation/otp.dart';
+import 'package:connect/presentation/pages/auth/auth.dart';
+import 'package:connect/presentation/pages/screen/app_start.dart';
+import 'package:connect/presentation/pages/auth/otp.dart';
 import 'package:connect/presentation/splash_page.dart';
 import 'package:connect/torch/torch.dart';
 import 'package:connect/utils/colors_constants.dart';

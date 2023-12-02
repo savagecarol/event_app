@@ -1,4 +1,4 @@
-import 'package:connect/presentation/chat_screen.dart';
+import 'package:connect/presentation/pages/screen/chat_screen.dart';
 import 'package:connect/presentation/components/custom_chat_card.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/utils/colors_constants.dart';
