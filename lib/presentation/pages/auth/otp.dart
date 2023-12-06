@@ -43,7 +43,7 @@ class Otp extends StatelessWidget {
                 ),
                 CustomButton(
                   onTap: () {
-                    Get.offAllNamed(Urlconstants.torchUrl);
+                    Get.offAllNamed(Urlconstants.addProfileUrl);
                   },
                   containerColor: ColorConstants.white,
                   shadowColor: ColorConstants.white,

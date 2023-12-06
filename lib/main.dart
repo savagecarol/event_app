@@ -1,3 +1,4 @@
+import 'package:connect/presentation/pages/auth/add_profile.dart';
 import 'package:connect/presentation/pages/auth/auth.dart';
 import 'package:connect/presentation/pages/screen/app_start.dart';
 import 'package:connect/presentation/pages/auth/otp.dart';
@@ -30,9 +31,9 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             initialRoute: Urlconstants.appStartUrl,
             theme: ThemeData(
-              accentColor: ColorConstants.accentRed,
+              hintColor: ColorConstants.accentRed,
               scaffoldBackgroundColor: ColorConstants.black,
-              appBarTheme:   AppBarTheme(
+              appBarTheme:  const AppBarTheme(
                   backgroundColor: ColorConstants.iconRed,
                   elevation: 0  ),
             ),
@@ -53,6 +54,10 @@ class MyApp extends StatelessWidget {
               GetPage(
                 name: Urlconstants.authUrl,
                 page: () => Auth(),
+              ),
+              GetPage(
+                name: Urlconstants.addProfileUrl,
+                page: () => Add_Profile()
               ),
                GetPage(
                 name: Urlconstants.torchUrl,

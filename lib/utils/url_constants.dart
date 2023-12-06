@@ -4,4 +4,5 @@ class Urlconstants{
   static String appStartUrl = "/app-start-url";
   static String otpUrl = "/otp-url";
   static String torchUrl = "/torch-url";
+  static String addProfileUrl = "/add-profile-data";
 }
