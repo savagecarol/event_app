@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
-import 'package:connect/presentation/pages/screen/search_tag_screen.dart';
+import 'package:connect/presentation/pages/screen/parent_tag_screen.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
 import 'package:flutter/material.dart';
@@ -99,7 +99,7 @@ class _SearchState extends State<Search> {
                             child: InkWell(
                               onTap: () {
                                    Get.to(
-                                SearchTagScreen(parentTag:  popularList[i],
+                                ParentTagScreen(parentTag:  popularList[i],
 
                                 ),
                                  transition :      Transition.rightToLeft
@@ -133,7 +133,7 @@ class _SearchState extends State<Search> {
                             child: InkWell(
                               onTap: () {
                                 Get.to(
-                                SearchTagScreen(parentTag:  popularList[i+1],
+                                ParentTagScreen(parentTag:  popularList[i+1],
 
                                 ),
                                  transition :      Transition.rightToLeft

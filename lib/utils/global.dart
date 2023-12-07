@@ -2,6 +2,7 @@ import 'package:connect/model/message.dart';
 import 'package:connect/model/action/GlobalController.dart';
 import 'package:connect/model/parent_tag.dart';
 import 'package:connect/model/post.dart';
+import 'package:connect/model/tag_name.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
@@ -79,7 +80,7 @@ List<Post> postList = [
         eventTime : DateTime.now() , 
         title : "lets play game ",
         description: "",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        tagList: [TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
         images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
        ),
 
@@ -90,7 +91,7 @@ List<Post> postList = [
         eventTime : DateTime.now() , 
         title : "lets play game ",
         description: "",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        tagList: [TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
         images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
        ),
 
@@ -101,7 +102,7 @@ List<Post> postList = [
         eventTime : DateTime.now() , 
         title : "lets play game ",
         description: "",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        tagList: [ TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
         images: ["https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg"]
        ),
   ];
@@ -180,7 +181,7 @@ List<Post> trendingList = [
         eventTime : DateTime.now() , 
         title : "lets play game ",
         description: "",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        tagList: [TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket") ] , 
         images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
        ),
 
@@ -191,7 +192,7 @@ List<Post> trendingList = [
         eventTime : DateTime.now() , 
         title : "lets play game ",
         description: "",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        tagList: [TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
         images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
        ),
 
@@ -202,7 +203,7 @@ List<Post> trendingList = [
         eventTime : DateTime.now() , 
         title : "lets play game ",
         description: "",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        tagList: [ TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
         images: ["https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg"]
        ),
 
@@ -213,7 +214,7 @@ List<Post> trendingList = [
         eventTime : DateTime.now() , 
         title : "lets play game ",
         description: "",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        tagList: [TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
         images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
        ),  
 
@@ -225,7 +226,7 @@ List<Post> trendingList = [
         eventTime : DateTime.now() , 
         title : "lets play game ",
         description: "",
-        tagList: [ "Cricket" , "FootBall"  , "DJ"] , 
+        tagList: [TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
         images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
        ),
   ];
