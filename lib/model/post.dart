@@ -1,4 +1,5 @@
 import 'package:connect/model/tag.dart';
+import 'package:connect/model/tag_name.dart';
 
 class Post {
   String id;
@@ -7,7 +8,7 @@ class Post {
   String title;
   String description;
   DateTime eventTime;
-  List<String> tagList;
+  List<TagName> tagList;
   List<String> images;
   Post(
       {required this.id,

@@ -2,6 +2,7 @@ import 'package:connect/presentation/pages/auth/add_profile.dart';
 import 'package:connect/presentation/pages/auth/auth.dart';
 import 'package:connect/presentation/pages/screen/app_start.dart';
 import 'package:connect/presentation/pages/auth/otp.dart';
+import 'package:connect/presentation/pages/screen/setting_screen.dart';
 import 'package:connect/presentation/splash_page.dart';
 import 'package:connect/torch/torch.dart';
 import 'package:connect/utils/colors_constants.dart';
@@ -64,6 +65,11 @@ class MyApp extends StatelessWidget {
                 page: () => const Torch(),
                 transition: Transition.circularReveal
               ),
+                GetPage(
+                name: Urlconstants.settingUrl,
+                page: () => const SettingScreen(),
+                transition: Transition.circularReveal
+               ),
             ],
           );
         });

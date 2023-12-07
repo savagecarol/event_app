@@ -61,27 +61,31 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return customScaffold(
             appBar: AppBar(
+               toolbarHeight: 60.h,
               backgroundColor: ColorConstants.white,
-              title: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Obx(() {
-                    if (globalController.globalvariable.value.partyAnimation) {
-                      return Container();
-                    }
-                    return Container(
-                      decoration: BoxDecoration(
-                          color: ColorConstants.amberColor,
-                          shape: BoxShape.circle),
-                      child: CloseButton(
-                        color: ColorConstants.red,
-                        onPressed: () {
-                          Get.toNamed(Urlconstants.firstPageUrl);
-                        },
-                      ),
-                    );
-                  })
-                ],
+              title: Container(
+                margin: EdgeInsets.only(top : 16.h),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Obx(() {
+                      if (globalController.globalvariable.value.partyAnimation) {
+                        return Container();
+                      }
+                      return Container(
+                        decoration: BoxDecoration(
+                            color: ColorConstants.amberColor,
+                            shape: BoxShape.circle),
+                        child: CloseButton(
+                          color: ColorConstants.red,
+                          onPressed: () {
+                            Get.toNamed(Urlconstants.firstPageUrl);
+                          },
+                        ),
+                      );
+                    })
+                  ],
+                ),
               ),
             ),
             backgroundColor: ColorConstants.white,

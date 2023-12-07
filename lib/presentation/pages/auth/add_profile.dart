@@ -7,7 +7,6 @@ import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 class Add_Profile extends StatelessWidget {
   @override
@@ -40,19 +39,22 @@ class Add_Profile extends StatelessWidget {
                 height: 16.h,
               ),
               CustomTextField(
+                  icon: Icons.calendar_month,
+                  isPrefixIcon: true,
                   hintText: "Enter your DOB",
                   initialValue: '',
                   width: 100,
-                  onChange: (Value) => {},
-                  onTap: () async {
+                  isEnable: false,
+                  onChange: (Value) {  
+                  },
+                   onTap: () async {
                         DateTime? pickedDate = await showDatePicker(
                             context: context,
                             initialDate: DateTime.now(),
                             firstDate: DateTime(1950),
                             lastDate: DateTime(2050));
-
                         if (pickedDate != null) {
-                          dateController.text = DateFormat('dd MMMM yyyy').format(pickedDate);
+                          // dateController.text = DateFormat('dd MMMM yyyy').format(pickedDate);
                         }
                       },
                   ),
