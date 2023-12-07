@@ -10,8 +10,6 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class Add_Profile extends StatelessWidget {
-  var dateController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     var textFieldList = ["Name", "DOB", "Mobile", "Interests"];
@@ -41,26 +39,12 @@ class Add_Profile extends StatelessWidget {
               SizedBox(
                 height: 16.h,
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 8,
-                ),
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    border: Border.all(width: 1, color: Colors.black),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black.withOpacity(.1),
-                          blurRadius: 3,
-                          offset: const Offset(0, 5))
-                    ]),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 16),
-                  child: TextFormField(
-                      controller: dateController,
-                      readOnly: true,
-                      // controller: GetxController(),
-                      onTap: () async {
+              CustomTextField(
+                  hintText: "Enter your DOB",
+                  initialValue: '',
+                  width: 100,
+                  onChange: (Value) => {},
+                  onTap: () async {
                         DateTime? pickedDate = await showDatePicker(
                             context: context,
                             initialDate: DateTime.now(),
@@ -71,18 +55,7 @@ class Add_Profile extends StatelessWidget {
                           dateController.text = DateFormat('dd MMMM yyyy').format(pickedDate);
                         }
                       },
-                      maxLength: 10,
-                      obscureText: false,
-                      style: const TextStyle(fontSize: 16),
-                      decoration: const InputDecoration(
-                          counterText: "",
-                          border: InputBorder.none,
-                          hintText: "Enter your DOB",
-                          prefixIcon: null,
-                          hintStyle: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w400))),
-                ),
-              ),
+                  ),
               SizedBox(
                 height: 16.h,
               ),
