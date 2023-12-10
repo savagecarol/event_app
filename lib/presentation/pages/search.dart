@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/presentation/pages/screen/parent_tag_screen.dart';
+import 'package:connect/presentation/pages/screen/post_screen.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
 import 'package:flutter/material.dart';
@@ -28,15 +29,20 @@ class _SearchState extends State<Search> {
               image: CachedNetworkImageProvider(trendingList[index].images[0]),
               fit: BoxFit.fill)),
       margin: EdgeInsets.symmetric(horizontal: 8.w),
-      child: Padding(
-        padding: EdgeInsets.all(8.h),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            customWhiteText(trendingList[index].title, 18.sp,
-                fontWeight: FontWeight.w600)
-          ],
+      child: InkWell(
+        onTap: () {
+          Get.to(PostScreen(post: trendingList[index]));
+        },
+        child: Padding(
+          padding: EdgeInsets.all(8.h),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              customWhiteText(trendingList[index].title, 18.sp,
+                  fontWeight: FontWeight.w600)
+            ],
+          ),
         ),
       ),
     );
@@ -98,12 +104,11 @@ class _SearchState extends State<Search> {
                           Expanded(
                             child: InkWell(
                               onTap: () {
-                                   Get.to(
-                                ParentTagScreen(parentTag:  popularList[i],
-
-                                ),
-                                 transition :      Transition.rightToLeft
-                                );
+                                Get.to(
+                                    ParentTagScreen(
+                                      parentTag: popularList[i],
+                                    ),
+                                    transition: Transition.rightToLeft);
                               },
                               child: Container(
                                   height: 80.h,
@@ -133,11 +138,10 @@ class _SearchState extends State<Search> {
                             child: InkWell(
                               onTap: () {
                                 Get.to(
-                                ParentTagScreen(parentTag:  popularList[i+1],
-
-                                ),
-                                 transition :      Transition.rightToLeft
-                                );
+                                    ParentTagScreen(
+                                      parentTag: popularList[i + 1],
+                                    ),
+                                    transition: Transition.rightToLeft);
                               },
                               child: Container(
                                   height: 80.h,
@@ -151,7 +155,7 @@ class _SearchState extends State<Search> {
                                       color: ColorConstants.white,
                                       image: DecorationImage(
                                           image: CachedNetworkImageProvider(
-                                              popularList[i+1].image),
+                                              popularList[i + 1].image),
                                           fit: BoxFit.fill)),
                                   child: Center(
                                     child: customWhiteText(

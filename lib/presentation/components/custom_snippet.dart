@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart';
 
-Widget customScaffold({ PreferredSizeWidget? appBar,   required Widget body   , backgroundColor = ColorConstants.white}) {
+Widget customScaffold(
+    {PreferredSizeWidget? appBar,
+    required Widget body,
+    backgroundColor = ColorConstants.white}) {
   return SafeArea(
     child: Scaffold(
       backgroundColor: backgroundColor,
@@ -71,11 +74,11 @@ Widget chipWrap(
   );
 }
 
-void chipConstFunc(){}
-
+void chipConstFunc() {}
 
 Widget chips(String text, Color color, Color textColor, double fontSize,
-    {FontWeight fontWeight = FontWeight.normal ,Function() onTap = chipConstFunc}) {
+    {FontWeight fontWeight = FontWeight.normal,
+    Function() onTap = chipConstFunc}) {
   return InkWell(
     onTap: onTap,
     child: Container(
@@ -96,7 +99,6 @@ Widget chips(String text, Color color, Color textColor, double fontSize,
             : customWhiteText(text, fontSize, fontWeight: fontWeight)),
   );
 }
-
 
 Widget crossChips(String text, Color color, Color textColor, double fontSize,
     {FontWeight fontWeight = FontWeight.normal}) {
@@ -122,11 +124,34 @@ Widget crossChips(String text, Color color, Color textColor, double fontSize,
                 ? customBlackText(text, fontSize, fontWeight: fontWeight)
                 : customWhiteText(text, fontSize, fontWeight: fontWeight),
           ),
-
-           Icon(
-             Icons.clear,
-                color: ColorConstants.black,
-           )   
+          Icon(
+            Icons.clear,
+            color: ColorConstants.black,
+          )
         ],
       ));
+}
+
+AppBar customAppBar(heading , onTap ) {
+  return AppBar(
+    leading: Builder(
+      builder: (BuildContext context) {
+        return InkWell(
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onTap: onTap
+        );
+      },
+    ),
+    elevation: 0.0,
+    backgroundColor: ColorConstants.black,
+    title: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        customWhiteText(heading, 18.h, fontWeight: FontWeight.bold),
+      ],
+    ),
+  );
 }

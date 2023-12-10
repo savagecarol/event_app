@@ -21,30 +21,10 @@ class _TagScreenState extends State<TagScreen> {
   Widget build(BuildContext context) {
     return customScaffold(
         backgroundColor: ColorConstants.black,
-        appBar: AppBar(
-          leading: Builder(
-            builder: (BuildContext context) {
-              return InkWell(
-                child: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
-                ),
-                onTap: () {
-                  Get.offNamed(Urlconstants.firstPageUrl);
-                },
-              );
-            },
-          ),
-          elevation: 0.0,
-          backgroundColor: ColorConstants.black,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              customWhiteText(widget.tagName.tagName, 18.h,
-                  fontWeight: FontWeight.bold),
-            ],
-          ),
-        ),
+        appBar: customAppBar(widget.tagName.tagName, () {
+          Get.back();
+        }),
+  
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(

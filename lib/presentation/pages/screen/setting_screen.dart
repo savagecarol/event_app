@@ -14,30 +14,9 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
-        appBar: AppBar(
-          leading: Builder(
-            builder: (BuildContext context) {
-              return InkWell(
-                child: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
-                ),
-                onTap: () {
-                  Get.offNamed(Urlconstants.firstPageUrl);
-                },
-              );
-            },
-          ),
-          elevation: 0.0,
-          backgroundColor: ColorConstants.black,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              customWhiteText("Settings", 18.h,
-                  fontWeight: FontWeight.bold),
-            ],
-          ),
-        ),
+        appBar: customAppBar("Settings", () {
+          Get.back();
+        }),
           backgroundColor: ColorConstants.black,
       body: SingleChildScrollView(
       child: Padding(

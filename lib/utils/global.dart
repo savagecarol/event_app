@@ -74,6 +74,22 @@ List<Message> listDocument = [
 
 List<Post> postList = [
         Post(
+                  userId:  "dsfdsfdsf",  
+        id: "121212",
+        userName: "@savageCarol",
+        name : "Kartikeya Sharma" , 
+        eventTime : DateTime.now() , 
+        title : "lets play game ",
+        description: "we are organinzing the sports event tomorrow with my fiends in the sport complex come on guys we will have fun lets do it",
+        tagList: [TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
+        images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg" , 
+        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg" , 
+        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg" , 
+        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
+       ),
+
+        Post(
+                  userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
         name : "Kartikeya Sharma" , 
@@ -85,17 +101,7 @@ List<Post> postList = [
        ),
 
         Post(
-        id: "121212",
-        userName: "@savageCarol",
-        name : "Kartikeya Sharma" , 
-        eventTime : DateTime.now() , 
-        title : "lets play game ",
-        description: "",
-        tagList: [TagName(id: "12", tagName: "Cricket") , TagName(id: "123", tagName: "Cricket")] , 
-        images: ["https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"]
-       ),
-
-        Post(
+        userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
         name : "Kartikeya Sharma" , 
@@ -175,6 +181,7 @@ List<ParentTag> popularList = [
 
 List<Post> trendingList = [
         Post(
+                  userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
         name : "Kartikeya Sharma" , 
@@ -186,6 +193,7 @@ List<Post> trendingList = [
        ),
 
         Post(
+                  userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
         name : "Kartikeya Sharma" , 
@@ -197,6 +205,7 @@ List<Post> trendingList = [
        ),
 
         Post(
+                  userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
         name : "Kartikeya Sharma" , 
@@ -208,6 +217,7 @@ List<Post> trendingList = [
        ),
 
           Post(
+                    userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
         name : "Kartikeya Sharma" , 
@@ -220,6 +230,7 @@ List<Post> trendingList = [
 
 
           Post(
+                    userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
         name : "Kartikeya Sharma" , 
