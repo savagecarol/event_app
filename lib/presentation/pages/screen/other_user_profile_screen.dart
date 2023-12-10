@@ -1,4 +1,7 @@
+import 'package:connect/presentation/components/custom_post_card.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
+import 'package:connect/utils/colors_constants.dart';
+import 'package:connect/utils/global.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,15 +21,19 @@ class _OtherUserProfileScreenState extends State<OtherUserProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
+      backgroundColor: ColorConstants.black,
         appBar: customAppBar(widget.userName, () {
           Get.back();
         }),
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w),
+        body:  SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [],
-          ),
+          children: [
+                for (int i = 0; i < postList.length; i++)
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            child: CustomPostCard(post: postList[i]),
+          )
+          ]),
         ));
   }
 }
