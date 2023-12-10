@@ -1,8 +1,10 @@
 import 'package:connect/presentation/pages/auth/add_profile.dart';
 import 'package:connect/presentation/pages/auth/auth.dart';
+import 'package:connect/presentation/pages/auth/edit_tag_screen.dart';
 import 'package:connect/presentation/pages/screen/app_start.dart';
 import 'package:connect/presentation/pages/auth/otp.dart';
 import 'package:connect/presentation/pages/screen/setting_screen.dart';
+import 'package:connect/presentation/pages/screen/tag_screen.dart';
 import 'package:connect/presentation/splash_page.dart';
 import 'package:connect/torch/torch.dart';
 import 'package:connect/utils/colors_constants.dart';
@@ -59,6 +61,10 @@ class MyApp extends StatelessWidget {
               GetPage(
                 name: Urlconstants.addProfileUrl,
                 page: () => Add_Profile()
+              ),
+              GetPage(
+                name: Urlconstants.editTagsUrl,
+                page: () => EditTagScreen(fetchPrevTags: false)
               ),
                GetPage(
                 name: Urlconstants.torchUrl,

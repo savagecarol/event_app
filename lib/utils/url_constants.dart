@@ -6,5 +6,5 @@ class Urlconstants{
   static String torchUrl = "/torch-url";
   static String addProfileUrl = "/add-profile-data";
   static String settingUrl = "/setting-url";
-
+  static String editTagsUrl = "/edit-tags-url";
 }

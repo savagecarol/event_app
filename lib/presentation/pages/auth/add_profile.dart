@@ -73,7 +73,7 @@ class Add_Profile extends StatelessWidget {
               ),
               CustomButton(
                 onTap: () {
-                  Get.offAllNamed(Urlconstants.torchUrl);
+                  Get.offAllNamed(Urlconstants.editTagsUrl);
                 },
                 containerColor: ColorConstants.white,
                 shadowColor: ColorConstants.white,
