@@ -113,8 +113,7 @@ Widget crossChips(String text, Color color, Color textColor, double fontSize,
         ],
       ),
       padding: EdgeInsets.symmetric(vertical: 6.h, horizontal: 8.w),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Wrap(
         children: [
           Container(
             margin: EdgeInsets.only(right: 4.w),
@@ -122,11 +121,13 @@ Widget crossChips(String text, Color color, Color textColor, double fontSize,
                 ? customBlackText(text, fontSize, fontWeight: fontWeight)
                 : customWhiteText(text, fontSize, fontWeight: fontWeight),
           ),
-
-           Icon(
+            Icon(
              Icons.clear,
+             size: 18.sp,
                 color: ColorConstants.black,
-           )   
+           ) ,
+           
+          
         ],
       ));
 }

@@ -64,7 +64,7 @@ class MyApp extends StatelessWidget {
               ),
               GetPage(
                 name: Urlconstants.editTagsUrl,
-                page: () => EditTagScreen(fetchPrevTags: false)
+                page: () => EditTagScreen()
               ),
                GetPage(
                 name: Urlconstants.torchUrl,
