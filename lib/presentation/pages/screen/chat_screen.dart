@@ -29,30 +29,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return customScaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          leading: Builder(
-            builder: (BuildContext context) {
-              return InkWell(
-                child: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.black,
-                ),
-                onTap: () {
-                  Get.toNamed(Urlconstants.firstPageUrl);
-                },
-              );
-            },
-          ),
-          elevation: 0.0,
-          backgroundColor: Colors.white,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              customBlackText(widget.displayName, 18.h,
-                  fontWeight: FontWeight.bold),
-            ],
-          ),
-        ),
+        appBar: customAppBar(widget.displayName , Urlconstants.firstPageUrl),
         body: Column(
           children: [
             Expanded(

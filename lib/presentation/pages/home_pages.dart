@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             for(int i = 0 ; i < postList.length  ; i++)
                 CustomPostCard(
-                  post : postList[i]
+                  post : postList[i] 
                 )
           ],
         ),

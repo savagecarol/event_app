@@ -3,6 +3,7 @@ import 'package:connect/model/tag_name.dart';
 
 class Post {
   String id;
+  String userId;
   String userName;
   String name;
   String title;
@@ -11,7 +12,9 @@ class Post {
   List<TagName> tagList;
   List<String> images;
   Post(
-      {required this.id,
+      {
+      required this.id,
+      required this.userId,
       required this.userName,
       required this.name,
       required this.title,

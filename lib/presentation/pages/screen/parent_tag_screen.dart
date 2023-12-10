@@ -6,7 +6,6 @@ import 'package:connect/utils/global.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 
 class ParentTagScreen extends StatefulWidget {
   final ParentTag parentTag;
@@ -21,30 +20,7 @@ class _ParentTagScreenState extends State<ParentTagScreen> {
   Widget build(BuildContext context) {
     return customScaffold(
         backgroundColor: ColorConstants.black,
-        appBar: AppBar(
-          leading: Builder(
-            builder: (BuildContext context) {
-              return InkWell(
-                child: const Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
-                ),
-                onTap: () {
-                  Get.offNamed(Urlconstants.firstPageUrl);
-                },
-              );
-            },
-          ),
-          elevation: 0.0,
-          backgroundColor: ColorConstants.black,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              customWhiteText(widget.parentTag.name, 18.h,
-                  fontWeight: FontWeight.bold),
-            ],
-          ),
-        ),
+        appBar:customAppBar(widget.parentTag.name , Urlconstants.firstPageUrl),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
