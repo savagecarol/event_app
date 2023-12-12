@@ -1,12 +1,15 @@
 import 'dart:ui';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:connect/enum/post_render_enum.dart';
 import 'package:connect/model/post.dart';
 import 'package:connect/model/tag_name.dart';
 import 'package:connect/presentation/components/custom_button.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
+import 'package:connect/presentation/pages/screen/chat_screen.dart';
 import 'package:connect/presentation/pages/screen/other_user_profile_screen.dart';
 import 'package:connect/utils/colors_constants.dart';
+import 'package:connect/utils/global.dart';
 import 'package:connect/utils/string_constants.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
@@ -93,10 +96,10 @@ class _PostScreenState extends State<PostScreen> {
                           SizedBox(
                             height: 16.h,
                           ),
-                          SingleChildScrollView( 
+                          SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: SlideCountdown(
-                                separatorType: SeparatorType.title,
+                              separatorType: SeparatorType.title,
                               separatorStyle: TextStyle(
                                   color: ColorConstants.black, fontSize: 12.sp),
                               duration: defaultDuration,
@@ -121,10 +124,8 @@ class _PostScreenState extends State<PostScreen> {
                       SizedBox(
                         height: 8.h,
                       ),
-
                       customWhiteText(widget.post.description, 18.sp,
                           fontWeight: FontWeight.w500),
-                     
                       SizedBox(
                         height: 8.h,
                       ),
@@ -207,15 +208,47 @@ class _PostScreenState extends State<PostScreen> {
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(top: 16.h),
-                child: CustomButton(
-                  onTap: () {},
-                  containerColor: ColorConstants.white,
-                  shadowColor: ColorConstants.white,
-                  labelText: "Intrested",
-                ),
-              )
+              Builder(builder: (context) {
+                var labelText = "";
+
+                switch (widget.post.postRenderEnum) {
+                  case PostRenderEnum.intrested:
+                    labelText = "Intrested";
+                    break;
+                  case PostRenderEnum.approval:
+                    labelText = "waiting for approval";
+                    break;
+                  case PostRenderEnum.message:
+                    labelText = "Message";
+                }
+
+                return Container(
+                  margin: EdgeInsets.only(top: 16.h),
+                  child: CustomButton(
+                      onTap: () {
+                        switch (widget.post.postRenderEnum) {
+                          case PostRenderEnum.intrested:
+                            {}
+                            break;
+                          case PostRenderEnum.approval:
+                            {}
+                            break;
+                          case PostRenderEnum.message:
+                            {
+                              Get.to(ChatScreen(
+                                  displayName: "Sd",
+                                  phoneNumber: "7830980280",
+                                  userId: 12,
+                                  friendId: 1233));
+                            }
+                            break;
+                        }
+                      },
+                      containerColor: ColorConstants.white,
+                      shadowColor: ColorConstants.white,
+                      labelText: labelText),
+                );
+              })
             ],
           ),
         ));

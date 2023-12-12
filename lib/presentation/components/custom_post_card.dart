@@ -126,14 +126,3 @@ class CustomPostCard extends StatelessWidget {
     );
   }
 }
-
-
-
-                  // SlideCountdown(
-                  //   duration: defaultDuration,
-                  //   countUp: false,
-                  //   decoration: BoxDecoration(
-                  //     color: Colors.black,
-                  //     borderRadius: BorderRadius.all(Radius.circular(5.r)),
-                  //   ),
-                  // ),

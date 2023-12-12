@@ -6,6 +6,7 @@ import 'package:connect/utils/global.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class ParentTagScreen extends StatefulWidget {
   final ParentTag parentTag;
@@ -20,7 +21,9 @@ class _ParentTagScreenState extends State<ParentTagScreen> {
   Widget build(BuildContext context) {
     return customScaffold(
         backgroundColor: ColorConstants.black,
-        appBar:customAppBar(widget.parentTag.name , Urlconstants.firstPageUrl),
+        appBar: customAppBar(widget.parentTag.name, () {
+          Get.back();
+        }),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),
           child: Column(
@@ -34,16 +37,14 @@ class _ParentTagScreenState extends State<ParentTagScreen> {
                       child: Row(
                     children: [
                       for (int i = 0; i < postList[0].tagList.length; i++)
-                        Builder(
-                          builder: (context) {
-                            return Container(
-                              margin: EdgeInsets.only(right: 8.w),
-                              child: crossChips(postList[0].tagList[i].tagName,
-                                  ColorConstants.red, Colors.white, 12.sp,
-                                  fontWeight: FontWeight.bold),
-                            );
-                          }
-                        ),
+                        Builder(builder: (context) {
+                          return Container(
+                            margin: EdgeInsets.only(right: 8.w),
+                            child: crossChips(postList[0].tagList[i].tagName,
+                                ColorConstants.red, Colors.white, 12.sp,
+                                fontWeight: FontWeight.bold),
+                          );
+                        }),
                     ],
                   )),
                 ),
@@ -53,9 +54,7 @@ class _ParentTagScreenState extends State<ParentTagScreen> {
                   child: Column(
                     children: [
                       for (int i = 0; i < postList.length; i++)
-                        CustomPostCard(
-                          post: postList[i]
-                        )
+                        CustomPostCard(post: postList[i])
                     ],
                   ),
                 ),
