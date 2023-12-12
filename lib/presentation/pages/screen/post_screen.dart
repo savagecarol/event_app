@@ -102,7 +102,7 @@ class _PostScreenState extends State<PostScreen> {
                               duration: defaultDuration,
                               separatorPadding: EdgeInsets.all(4.w),
                               countUp: false,
-                              textStyle: TextStyle(
+                              style: TextStyle(
                                   color: ColorConstants.black, fontSize: 18.sp),
                               decoration: BoxDecoration(
                                 color: Colors.white,

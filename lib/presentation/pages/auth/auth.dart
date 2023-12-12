@@ -41,7 +41,7 @@ class Auth extends StatelessWidget {
                 ),
                 CustomButton(
                   onTap: () {
-                    Get.toNamed(Urlconstants.otpUrl);
+                    Get.toNamed(Urlconstants.addImageUrl);
                   },
                   containerColor: ColorConstants.white,
                   shadowColor: ColorConstants.white,
