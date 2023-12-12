@@ -1,6 +1,7 @@
 import 'package:connect/presentation/pages/auth/add_profile.dart';
 import 'package:connect/presentation/pages/auth/auth.dart';
 import 'package:connect/presentation/pages/auth/edit_tag_screen.dart';
+import 'package:connect/presentation/pages/screen/add_profile_image.dart';
 import 'package:connect/presentation/pages/screen/app_start.dart';
 import 'package:connect/presentation/pages/auth/otp.dart';
 import 'package:connect/presentation/pages/screen/setting_screen.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             title: StringConstants.appName,
             debugShowCheckedModeBanner: false,
-            initialRoute: Urlconstants.firstPageUrl,
+            initialRoute: Urlconstants.addProfileImages,
             theme: ThemeData(
               hintColor: ColorConstants.accentRed,
               scaffoldBackgroundColor: ColorConstants.black,
@@ -75,6 +76,10 @@ class MyApp extends StatelessWidget {
                 page: () => const SettingScreen(),
                 transition: Transition.circularReveal
                ),
+                 GetPage(
+                name: Urlconstants.addProfileImages,
+                page: () => AddProfileImage(),
+              ),
             ],
           );
         });
