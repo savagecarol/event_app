@@ -69,15 +69,7 @@ class Add_Profile extends StatelessWidget {
                 height: 16.h,
               ),
 
-                CustomTextField(
-                hintText: "Event Time",
-                onChange: (Value) => {},
-                initialValue: '',
-                textInputType: TextInputType.phone,
-              ),
-              SizedBox(
-                height: 16.h,
-              ),
+              
               CustomButton(
                 onTap: () {
                   Get.offAllNamed(Urlconstants.editTagsUrl);

@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/string_constants.dart';
@@ -17,7 +19,9 @@ class AppStart extends StatefulWidget {
 
 class _AppStartState extends State<AppStart> {
   _isLogin() async {
-    await Future.delayed(Duration(seconds: 2));
+  await Timer(Duration(seconds: 3), () {
+  print("Yeah, this line is printed after 3 seconds");
+});
     Get.offNamed(Urlconstants.authUrl);
   }
 

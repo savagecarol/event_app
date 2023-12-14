@@ -38,6 +38,28 @@ class AddPost extends StatelessWidget {
               SizedBox(
                 height: 16.h,
               ), 
+              CustomTextField(
+                  icon: Icons.calendar_month,
+                  isPrefixIcon: true,
+                  hintText: "Enter your DOB",
+                  initialValue: '',
+                  isEnable: false,
+                  onChange: (Value) {  
+                  },
+                   onTap: () async {
+                        DateTime? pickedDate = await showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(1950),
+                            lastDate: DateTime(2050));
+                        if (pickedDate != null) {
+                          // dateController.text = DateFormat('dd MMMM yyyy').format(pickedDate);
+                        }
+                      },
+                  ),
+              SizedBox(
+                height: 16.h,
+              ),
                CustomTextButton(text: "Tags", 
                 onTap: () {} ,
                  isPostIcon: true , 

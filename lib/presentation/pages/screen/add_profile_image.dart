@@ -23,7 +23,7 @@ class _AddProfileImageState extends State<AddProfileImage> {
     pickImages();
   }
 
-  Future pickImages() async {
+  pickImages() async {
     try {
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);
       if (image == null) return;
