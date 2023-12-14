@@ -3,7 +3,6 @@ import 'package:connect/presentation/components/custom_post_card.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
-import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

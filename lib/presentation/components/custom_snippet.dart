@@ -11,7 +11,7 @@ Widget customScaffold(
   return SafeArea(
     child: Scaffold(
       backgroundColor: backgroundColor,
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       appBar: appBar,
       body: body,
     ),

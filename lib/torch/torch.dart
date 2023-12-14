@@ -79,7 +79,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                         child: CloseButton(
                           color: ColorConstants.red,
                           onPressed: () {
-                            Get.toNamed(Urlconstants.firstPageUrl);
+                            Get.toNamed(Urlconstants.home);
                           },
                         ),
                       );

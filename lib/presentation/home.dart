@@ -1,16 +1,16 @@
 import 'package:connect/presentation/components/custom_snippet.dart';
-import 'package:connect/presentation/pages/intrested.dart';
-import 'package:connect/presentation/pages/add_post.dart';
-import 'package:connect/presentation/pages/home_pages.dart';
-import 'package:connect/presentation/pages/search.dart';
-import 'package:connect/presentation/pages/profile.dart';
+import 'package:connect/presentation/pages/homeScreen/add_post.dart';
+import 'package:connect/presentation/pages/homeScreen/home_pages.dart';
+import 'package:connect/presentation/pages/homeScreen/intrested.dart';
+import 'package:connect/presentation/pages/homeScreen/profile.dart';
+import 'package:connect/presentation/pages/homeScreen/search.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class SplashPage extends StatelessWidget {
+class Home extends StatelessWidget {
   _getBody() {
     switch (globalController.globalvariable.value.counter) {
       case 0:

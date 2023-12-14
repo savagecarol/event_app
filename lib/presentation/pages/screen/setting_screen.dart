@@ -24,10 +24,14 @@ class SettingScreen extends StatelessWidget {
 
         child: Column(
           children: [      
-               CustomTextButton(text: "Tags", 
-                onTap: () {} ,
-                 isPostIcon: true , 
-                 iconSize: 18.h,),
+            CustomTextButton(
+                  text: "Tags",
+                  onTap: () {
+                    Get.toNamed(Urlconstants.editTagsUrl);
+                  },
+                  isPostIcon: true,
+                  iconSize: 18.h,
+                ),
 
                 CustomTextButton(text: "Authorization", 
                 onTap: () {} ,
@@ -63,3 +67,5 @@ class SettingScreen extends StatelessWidget {
     ));
   }
 }
+
+

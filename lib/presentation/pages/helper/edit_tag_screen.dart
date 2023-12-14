@@ -27,7 +27,7 @@ class _EditTagScreenState extends State<EditTagScreen> {
       appBar: AppBar(
           leading: IconButton(
             onPressed: () {
-              Get.offAllNamed(Urlconstants.authUrl);
+              Get.back();
             },
             icon: Icon(Icons.arrow_back),
           ),

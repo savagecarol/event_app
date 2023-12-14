@@ -1,11 +1,10 @@
-import 'package:connect/presentation/pages/auth/add_profile.dart';
+import 'package:connect/presentation/pages/helper/add_profile.dart';
 import 'package:connect/presentation/pages/auth/auth.dart';
-import 'package:connect/presentation/pages/auth/edit_tag_screen.dart';
-import 'package:connect/presentation/pages/screen/add_profile_image.dart';
+import 'package:connect/presentation/pages/helper/edit_tag_screen.dart';
 import 'package:connect/presentation/pages/screen/app_start.dart';
 import 'package:connect/presentation/pages/auth/otp.dart';
 import 'package:connect/presentation/pages/screen/setting_screen.dart';
-import 'package:connect/presentation/splash_page.dart';
+import 'package:connect/presentation/home.dart';
 import 'package:connect/torch/torch.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/string_constants.dart';
@@ -54,8 +53,8 @@ class MyApp extends StatelessWidget {
                 page: () => AppStart(),
               ),
               GetPage(
-                name: Urlconstants.firstPageUrl,
-                page: () => SplashPage(),
+                name: Urlconstants.home,
+                page: () => Home(),
                 transition: Transition.downToUp 
               ),
               GetPage(
