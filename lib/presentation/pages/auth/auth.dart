@@ -34,7 +34,6 @@ class Auth extends StatelessWidget {
                     hintText: "",
                     initialValue: "",
                     textInputType: TextInputType.number,
-                    width: 100,
                     onChange: (Value) {}),
                 SizedBox(
                   height: 16.h,

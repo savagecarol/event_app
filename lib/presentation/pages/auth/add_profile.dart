@@ -31,7 +31,6 @@ class Add_Profile extends StatelessWidget {
             children: [
               CustomTextField(
                 hintText: "Enter your ${textFieldList[0]}",
-                width: 100,
                 onChange: (Value) => {},
                 initialValue: '',
               ),
@@ -43,7 +42,6 @@ class Add_Profile extends StatelessWidget {
                   isPrefixIcon: true,
                   hintText: "Enter your DOB",
                   initialValue: '',
-                  width: 100,
                   isEnable: false,
                   onChange: (Value) {  
                   },
@@ -63,7 +61,16 @@ class Add_Profile extends StatelessWidget {
               ),
               CustomTextField(
                 hintText: "Enter your Mobile Number",
-                width: 100,
+                onChange: (Value) => {},
+                initialValue: '',
+                textInputType: TextInputType.phone,
+              ),
+              SizedBox(
+                height: 16.h,
+              ),
+
+                CustomTextField(
+                hintText: "Event Time",
                 onChange: (Value) => {},
                 initialValue: '',
                 textInputType: TextInputType.phone,

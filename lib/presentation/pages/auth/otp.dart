@@ -35,7 +35,6 @@ class Otp extends StatelessWidget {
                 CustomTextField(
                     hintText: "",
                     initialValue: "",
-                    width: 100,
                     textInputType: TextInputType.number,
                     onChange: (Value) {}),
                 SizedBox(

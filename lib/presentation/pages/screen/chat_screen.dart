@@ -49,7 +49,6 @@ class _ChatScreenState extends State<ChatScreen> {
                         hintText: "",
                         initialValue: "",
                         textInputType: TextInputType.number,
-                        width: 100,
                         onChange: (Value) {})),
                 Container(
                   margin: const EdgeInsets.only(left: 8),
