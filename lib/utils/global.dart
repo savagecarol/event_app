@@ -1,3 +1,4 @@
+import 'package:connect/enum/post_render_enum.dart';
 import 'package:connect/model/message.dart';
 import 'package:connect/model/action/GlobalController.dart';
 import 'package:connect/model/parent_tag.dart';
@@ -74,6 +75,7 @@ List<Message> listDocument = [
 
 List<Post> postList = [
         Post(
+               postRenderEnum: PostRenderEnum.intrested,  
                   userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
@@ -89,6 +91,7 @@ List<Post> postList = [
        ),
 
         Post(
+               postRenderEnum: PostRenderEnum.message,  
                   userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
@@ -101,6 +104,7 @@ List<Post> postList = [
        ),
 
         Post(
+        postRenderEnum: PostRenderEnum.approval,  
         userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
@@ -181,6 +185,7 @@ List<ParentTag> popularList = [
 
 List<Post> trendingList = [
         Post(
+               postRenderEnum: PostRenderEnum.intrested,  
                   userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
@@ -193,6 +198,7 @@ List<Post> trendingList = [
        ),
 
         Post(
+               postRenderEnum: PostRenderEnum.approval,  
                   userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
@@ -205,6 +211,7 @@ List<Post> trendingList = [
        ),
 
         Post(
+               postRenderEnum: PostRenderEnum.approval,  
                   userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
@@ -217,6 +224,7 @@ List<Post> trendingList = [
        ),
 
           Post(
+                 postRenderEnum: PostRenderEnum.intrested,  
                     userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",
@@ -230,6 +238,7 @@ List<Post> trendingList = [
 
 
           Post(
+                 postRenderEnum: PostRenderEnum.message,  
                     userId:  "dsfdsfdsf",  
         id: "121212",
         userName: "@savageCarol",

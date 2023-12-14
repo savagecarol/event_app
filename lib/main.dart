@@ -5,7 +5,6 @@ import 'package:connect/presentation/pages/screen/add_profile_image.dart';
 import 'package:connect/presentation/pages/screen/app_start.dart';
 import 'package:connect/presentation/pages/auth/otp.dart';
 import 'package:connect/presentation/pages/screen/setting_screen.dart';
-import 'package:connect/presentation/pages/screen/tag_screen.dart';
 import 'package:connect/presentation/splash_page.dart';
 import 'package:connect/torch/torch.dart';
 import 'package:connect/utils/colors_constants.dart';

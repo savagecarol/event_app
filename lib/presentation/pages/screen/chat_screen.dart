@@ -3,7 +3,6 @@ import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/presentation/components/custom_text_field.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
-import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -28,47 +27,48 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
-        backgroundColor: Colors.white,
-        appBar: customAppBar(widget.displayName , Urlconstants.firstPageUrl),
-        body: Column(
-          children: [
-            Expanded(
-                child: ListView.builder(
-                    reverse: true,
-                    itemCount: listDocument.length,
-                    itemBuilder: (context, index) {
-                      return CustomMessageBox(message: listDocument[index]);
-                    })),
-            Container(
-              padding: const EdgeInsets.all(16),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                      child: CustomTextField(
-                          hintText: "",
-                          initialValue: "",
-                          textInputType: TextInputType.number,
-                          width: 100,
-                          onChange: (Value) {})),
-                  Container(
-                    margin: const EdgeInsets.only(left: 8),
-                    height: 42.h,
-                    child: FloatingActionButton(
-                      onPressed: () {},
-                      backgroundColor: ColorConstants.iconRed,
-                      elevation: 0,
-                      child: Icon(
-                        Icons.send_rounded,
-                        color: Colors.white,
-                        size: 18.h,
-                      ),
+      backgroundColor: Colors.white,
+      appBar: customAppBar(widget.displayName, () {
+        Get.back();
+      }),
+      body: Column(
+        children: [
+          Expanded(
+              child: ListView.builder(
+                  reverse: true,
+                  itemCount: listDocument.length,
+                  itemBuilder: (context, index) {
+                    return CustomMessageBox(message: listDocument[index]);
+                  })),
+          Container(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: <Widget>[
+                Expanded(
+                    child: CustomTextField(
+                        hintText: "",
+                        initialValue: "",
+                        textInputType: TextInputType.number,
+                        onChange: (Value) {})),
+                Container(
+                  margin: const EdgeInsets.only(left: 8),
+                  height: 42.h,
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    backgroundColor: ColorConstants.iconRed,
+                    elevation: 0,
+                    child: Icon(
+                      Icons.send_rounded,
+                      color: Colors.white,
+                      size: 18.h,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
+      ),
     );
   }
 }

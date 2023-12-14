@@ -1,5 +1,5 @@
 import 'package:connect/presentation/components/custom_snippet.dart';
-import 'package:connect/presentation/pages/Chat.dart';
+import 'package:connect/presentation/pages/intrested.dart';
 import 'package:connect/presentation/pages/add_post.dart';
 import 'package:connect/presentation/pages/home_pages.dart';
 import 'package:connect/presentation/pages/search.dart';
@@ -20,7 +20,7 @@ class SplashPage extends StatelessWidget {
       case 2:
         return AddPost();
       case 3:
-        return Chat();
+        return Intrested();
       case 4:
         return Profile();
       default:

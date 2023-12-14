@@ -1,3 +1,4 @@
+import 'package:connect/enum/post_render_enum.dart';
 import 'package:connect/model/tag.dart';
 import 'package:connect/model/tag_name.dart';
 
@@ -11,9 +12,10 @@ class Post {
   DateTime eventTime;
   List<TagName> tagList;
   List<String> images;
+  PostRenderEnum postRenderEnum;
+
   Post(
-      {
-      required this.id,
+      {required this.id,
       required this.userId,
       required this.userName,
       required this.name,
@@ -21,5 +23,6 @@ class Post {
       required this.eventTime,
       required this.tagList,
       required this.images,
-      required this.description});
+      required this.description,
+      required this.postRenderEnum});
 }

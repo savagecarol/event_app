@@ -1,11 +1,11 @@
 import 'package:connect/presentation/components/custom_snippet.dart';
+import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
   final String initialValue;
-  final double width;
   final TextInputType textInputType;
   final Function(String?)? onChange;
   final IconData icon;
@@ -13,18 +13,21 @@ class CustomTextField extends StatelessWidget {
   final bool obstruct;
   final Function() onTap;
   final bool isEnable;
+  final int maxLength;
 
   CustomTextField(
       {required this.hintText,
       required this.initialValue,
-      required this.width,
       required this.onChange,
       this.textInputType = TextInputType.text,
       this.icon = Icons.location_on,
       this.isPrefixIcon = false,
       this.obstruct = false,
       this.onTap = chipConstFunc , 
-      this.isEnable = true});
+      this.isEnable = true,
+      this.maxLength  = 1000
+      
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -48,8 +51,9 @@ class CustomTextField extends StatelessWidget {
                     ? EdgeInsets.all(0)
                     : EdgeInsets.only(left: 16),
                 child: TextFormField(
+                  maxLines: null,
                   enabled: isEnable,
-                    maxLength: 10,
+                    maxLength: maxLength,
                     obscureText: obstruct,
                     onChanged: onChange,
                     keyboardType: textInputType,
@@ -65,7 +69,8 @@ class CustomTextField extends StatelessWidget {
                               )
                             : null,
                         hintStyle: const TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.w400))),
+                          color: ColorConstants.black,
+                            fontSize: 16, fontWeight: FontWeight.w800))),
               ),
             ),
     );
