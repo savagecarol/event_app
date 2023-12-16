@@ -8,9 +8,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
-import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'dart:core';
+
+import 'package:image_picker/image_picker.dart';
 
 final GlobalController globalController = Get.put(GlobalController());
 final ImagePicker picker = ImagePicker();

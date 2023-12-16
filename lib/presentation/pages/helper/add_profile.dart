@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:connect/presentation/components/custom_button.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
+import 'package:connect/presentation/components/custom_text_button.dart';
 import 'package:connect/presentation/components/custom_text_field.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
@@ -32,17 +33,51 @@ class Add_Profile extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
             child: Column(
               children: [
-                     Container(
-                        height: 200.h,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.blueAccent)),
-                        child: Center(
-                            child: IconButton(
-                          icon: Icon(Icons.add),
-                          onPressed: () async {
-                            File? x = await pickImages();
-                          },
-                        ))),
+                Container(
+                  height: 180.h,
+                  width: 180.h,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.white, width: 3.0),
+                      borderRadius: BorderRadius.all(Radius.circular(180))),
+                  child: customImage(
+                      boxFit: BoxFit.cover,
+                      isNetwork: false,
+                      imageUrl: StringConstants.defaultProfileImage,
+                      height: 50.h,
+                      width: 50.w,
+                      shape: BoxShape.circle),
+
+                  //     child: Center(
+                  //         child: Tab(
+                  //           icon: customImage(
+                  //       boxFit: BoxFit.contain,
+                  //       isNetwork: false,
+                  //       imageUrl: StringConstants.defaultProfileImage,
+                  //       height: 20.h,
+                  //       width: 20.w,
+                  //       shape: BoxShape.circle),
+                  //       child: IconButton(
+                  //           icon: Icon(Icons.add_a_photo, size: 20.h),
+                  //           onPressed: () async {
+                  //             File? x = await pickImages();
+                  //           },
+                  //         ),
+                  // ),
+                  //         )
+                ),
+                SizedBox(
+                  height: 8.h,
+                ),
+                CustomButton(
+                  shadowColor: ColorConstants.iconRed,
+                  containerColor: ColorConstants.iconRed,
+                  labelText: "Change Profile Photo",
+                  labelTextColor: Colors.blueAccent,
+                  onTap: () async {
+                    File? x = await pickImages();
+                  },
+                ),
                 SizedBox(
                   height: 16.h,
                 ),
