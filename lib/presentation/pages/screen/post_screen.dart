@@ -124,8 +124,17 @@ class _PostScreenState extends State<PostScreen> {
                       SizedBox(
                         height: 8.h,
                       ),
+                      
                       customWhiteText(widget.post.description, 18.sp,
                           fontWeight: FontWeight.w500),
+                      SizedBox(
+                        height: 8.h,
+                      ),
+                      customWhiteText("https://www.google.com", 18.sp),
+                      SizedBox(
+                        height: 8.h,
+                      ),
+                      customWhiteText("https://www.google.com", 18.sp),
                       SizedBox(
                         height: 8.h,
                       ),

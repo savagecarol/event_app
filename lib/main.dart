@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             title: StringConstants.appName,
             debugShowCheckedModeBanner: false,
-            initialRoute: Urlconstants.appStartUrl,
+            initialRoute: Urlconstants.home,
             theme: ThemeData(
               hintColor: ColorConstants.accentRed,
               scaffoldBackgroundColor: ColorConstants.black,
