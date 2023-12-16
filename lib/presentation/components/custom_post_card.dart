@@ -53,7 +53,8 @@ class CustomPostCard extends StatelessWidget {
                           width: 28.w,
                           boxFit: BoxFit.fill,
                           isNetwork: true,
-                          shape: BoxShape.circle
+                          shape: BoxShape.circle,
+                          baseContianer: Container()
                       ),
                     ),
                 

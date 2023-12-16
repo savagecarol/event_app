@@ -47,7 +47,8 @@ class CustomChatCard extends StatelessWidget {
                   width: 32.w,
                   boxFit: BoxFit.fill,
                   isNetwork: true,
-                  shape: BoxShape.circle),
+                  shape: BoxShape.circle,
+                  baseContianer: Container()),
             ),
             Expanded(
               child: Column(

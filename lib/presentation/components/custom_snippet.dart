@@ -21,10 +21,12 @@ Widget customScaffold(
 Widget customImage(
     {required BoxFit boxFit,
     required String imageUrl,
+    required Widget baseContianer,
     required double width,
     required isNetwork,
     required double height,
-    required BoxShape shape}) {
+    required BoxShape shape,
+    }) {
   return Container(
     height: height,
     width: width,
@@ -37,6 +39,7 @@ Widget customImage(
         fit: boxFit,
       ),
     ),
+    child: baseContianer,
   );
 }
 

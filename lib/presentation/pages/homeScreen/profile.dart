@@ -39,7 +39,8 @@ class Profile extends StatelessWidget {
                           width: 60.h,
                           boxFit: BoxFit.fill,
                           isNetwork: true,
-                          shape: BoxShape.circle),
+                          shape: BoxShape.circle,
+                  baseContianer: Container()),
                     ),
                     Container(
                       margin: EdgeInsets.only(top: 8.h),

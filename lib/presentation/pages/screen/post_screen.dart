@@ -165,7 +165,8 @@ class _PostScreenState extends State<PostScreen> {
                                 width: 28.w,
                                 boxFit: BoxFit.fill,
                                 isNetwork: true,
-                                shape: BoxShape.circle),
+                                shape: BoxShape.circle,
+                                baseContianer: Container()),
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,

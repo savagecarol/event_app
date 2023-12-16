@@ -46,25 +46,8 @@ class Add_Profile extends StatelessWidget {
                       imageUrl: StringConstants.defaultProfileImage,
                       height: 50.h,
                       width: 50.w,
-                      shape: BoxShape.circle),
-
-                  //     child: Center(
-                  //         child: Tab(
-                  //           icon: customImage(
-                  //       boxFit: BoxFit.contain,
-                  //       isNetwork: false,
-                  //       imageUrl: StringConstants.defaultProfileImage,
-                  //       height: 20.h,
-                  //       width: 20.w,
-                  //       shape: BoxShape.circle),
-                  //       child: IconButton(
-                  //           icon: Icon(Icons.add_a_photo, size: 20.h),
-                  //           onPressed: () async {
-                  //             File? x = await pickImages();
-                  //           },
-                  //         ),
-                  // ),
-                  //         )
+                      shape: BoxShape.circle,
+                  baseContianer: Container()),
                 ),
                 SizedBox(
                   height: 8.h,
@@ -73,7 +56,7 @@ class Add_Profile extends StatelessWidget {
                   shadowColor: ColorConstants.iconRed,
                   containerColor: ColorConstants.iconRed,
                   labelText: "Change Profile Photo",
-                  labelTextColor: Colors.blueAccent,
+                  labelTextColor: Colors.black,
                   onTap: () async {
                     File? x = await pickImages();
                   },
@@ -139,7 +122,8 @@ class Add_Profile extends StatelessWidget {
                       imageUrl: StringConstants.appIcon2,
                       height: 128.h,
                       width: 128.w,
-                      shape: BoxShape.circle),
+                      shape: BoxShape.circle,
+                  baseContianer: Container()),
                 ),
               ],
             ),

@@ -19,9 +19,9 @@ class AppStart extends StatefulWidget {
 
 class _AppStartState extends State<AppStart> {
   _isLogin() async {
-  await Timer(Duration(seconds: 3), () {
-  print("Yeah, this line is printed after 3 seconds");
-});
+    await Timer(Duration(seconds: 3), () {
+      print("Yeah, this line is printed after 3 seconds");
+    });
     Get.offNamed(Urlconstants.authUrl);
   }
 
@@ -34,26 +34,27 @@ class _AppStartState extends State<AppStart> {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
-            backgroundColor: ColorConstants.white,
-            body: Column(
-              children: [
-                Expanded(
-                  child: SizedBox(
-                      child: LottieBuilder.asset(
-                    StringConstants.loader,
+        backgroundColor: ColorConstants.white,
+        body: Column(
+          children: [
+            Expanded(
+              child: SizedBox(
+                  child: LottieBuilder.asset(
+                StringConstants.loader,
+                height: 128.h,
+                width: 128.w,
+              )),
+            ),
+            Center(
+                child: customImage(
+                    boxFit: BoxFit.contain,
+                    isNetwork: false,
+                    imageUrl: StringConstants.appIcon,
                     height: 128.h,
                     width: 128.w,
-                  )),
-                ),
-                Center(
-                    child: customImage(
-                        boxFit: BoxFit.contain,
-                        isNetwork: false,
-                        imageUrl: StringConstants.appIcon,
-                        height: 128.h,
-                        width: 128.w,
-                        shape: BoxShape.rectangle))
-              ],
-            ));
+                    shape: BoxShape.rectangle,
+                    baseContianer: Container()))
+          ],
+        ));
   }
 }
