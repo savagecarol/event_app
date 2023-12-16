@@ -1,5 +1,4 @@
 import 'package:connect/enum/post_render_enum.dart';
-import 'package:connect/model/tag.dart';
 import 'package:connect/model/tag_name.dart';
 
 class Post {

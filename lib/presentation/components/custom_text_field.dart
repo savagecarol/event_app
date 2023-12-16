@@ -1,7 +1,7 @@
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class CustomTextField extends StatelessWidget {
   final String hintText;

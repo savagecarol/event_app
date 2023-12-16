@@ -10,8 +10,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class CustomPostCard extends StatelessWidget {
-  Post post;
-  CustomPostCard({super.key, required this.post});
+  final Post post;
+  const CustomPostCard({super.key, required this.post});
   @override
   Widget build(BuildContext context) {
     

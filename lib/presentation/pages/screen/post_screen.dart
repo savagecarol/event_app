@@ -1,25 +1,14 @@
-import 'dart:ui';
-
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:connect/enum/post_render_enum.dart';
 import 'package:connect/model/post.dart';
-import 'package:connect/model/tag_name.dart';
 import 'package:connect/presentation/components/custom_button.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/presentation/pages/screen/chat_screen.dart';
 import 'package:connect/presentation/pages/screen/other_user_profile_screen.dart';
 import 'package:connect/utils/colors_constants.dart';
-import 'package:connect/utils/global.dart';
-import 'package:connect/utils/string_constants.dart';
-import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:slide_countdown/slide_countdown.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 

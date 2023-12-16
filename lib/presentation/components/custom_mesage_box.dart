@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomMessageBox extends StatelessWidget {
-  Message message;
-  CustomMessageBox(
+  final Message message;
+  const CustomMessageBox(
     {super.key,
      required this.message
     });

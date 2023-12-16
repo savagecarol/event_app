@@ -8,11 +8,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class ChatScreen extends StatefulWidget {
-  String displayName;
-  String phoneNumber;
-  int userId;
-  int friendId;
-  ChatScreen(
+  final String displayName;
+  final String phoneNumber;
+  final int userId;
+  final int friendId;
+  const ChatScreen(
       {super.key,
       required this.displayName,
       required this.phoneNumber,

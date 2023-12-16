@@ -1,10 +1,7 @@
-import 'dart:io';
-
 import 'package:connect/presentation/components/custom_button.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/presentation/components/custom_text_field.dart';
 import 'package:connect/utils/colors_constants.dart';
-import 'package:connect/utils/global.dart';
 import 'package:connect/utils/string_constants.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +37,7 @@ class Add_Profile extends StatelessWidget {
                             child: IconButton(
                           icon: Icon(Icons.add),
                           onPressed: () async {
-                            File? x = await pickImages();
+                            // File? x = await pickImages();
                           },
                         ))),
                 SizedBox(

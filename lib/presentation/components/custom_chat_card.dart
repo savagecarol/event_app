@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
