@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget customScaffold(
     {PreferredSizeWidget? appBar,
+    BottomNavigationBar? bottomNavigationBar,
     required Widget body,
     backgroundColor = ColorConstants.white}) {
   return SafeArea(
@@ -13,6 +14,7 @@ Widget customScaffold(
       resizeToAvoidBottomInset: false,
       appBar: appBar,
       body: body,
+      bottomNavigationBar: bottomNavigationBar , 
     ),
   );
 }

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations(
-        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);  
+        [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
     return ScreenUtilInit(
         splitScreenMode: true,
         minTextAdapt: true,
@@ -31,54 +31,43 @@ class MyApp extends StatelessWidget {
           return GetMaterialApp(
             title: StringConstants.appName,
             debugShowCheckedModeBanner: false,
-            initialRoute: Urlconstants.home,
+            initialRoute: Urlconstants.appStartUrl,
             theme: ThemeData(
-              hintColor: ColorConstants.accentRed,
-              scaffoldBackgroundColor: ColorConstants.black,
-              appBarTheme:  const AppBarTheme(
-                  backgroundColor: ColorConstants.iconRed,
-                  elevation: 0  ),
+              hintColor: ColorConstants.orange,
+              scaffoldBackgroundColor: ColorConstants.pinkBackground,
+              appBarTheme: const AppBarTheme(
+                  backgroundColor: ColorConstants.alizarinCrimson,
+                  elevation: 0),
             ),
             getPages: [
               GetPage(
                 name: Urlconstants.otpUrl,
                 page: () => Otp(),
               ),
-              // GetPage(
-              //   name: Urlconstants.addImageUrl,
-              //   page: () => AddProfileImage(),
-              // ),
               GetPage(
                 name: Urlconstants.appStartUrl,
                 page: () => AppStart(),
               ),
               GetPage(
-                name: Urlconstants.home,
-                page: () => Home(),
-                transition: Transition.downToUp 
-              ),
+                  name: Urlconstants.home,
+                  page: () => Home(),
+                  transition: Transition.downToUp),
               GetPage(
                 name: Urlconstants.authUrl,
                 page: () => Auth(),
               ),
               GetPage(
-                name: Urlconstants.addProfileUrl,
-                page: () => Add_Profile()
-              ),
+                  name: Urlconstants.addProfileUrl, page: () => Add_Profile()),
               GetPage(
-                name: Urlconstants.editTagsUrl,
-                page: () => EditTagScreen()
-              ),
-               GetPage(
-                name: Urlconstants.torchUrl,
-                page: () => const Torch(),
-                transition: Transition.circularReveal
-              ),
-                GetPage(
-                name: Urlconstants.settingUrl,
-                page: () => const SettingScreen(),
-                transition: Transition.circularReveal
-               ),
+                  name: Urlconstants.editTagsUrl, page: () => EditTagScreen()),
+              GetPage(
+                  name: Urlconstants.torchUrl,
+                  page: () => const Torch(),
+                  transition: Transition.circularReveal),
+              GetPage(
+                  name: Urlconstants.settingUrl,
+                  page: () => const SettingScreen(),
+                  transition: Transition.circularReveal),
             ],
           );
         });

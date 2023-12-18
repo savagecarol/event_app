@@ -23,23 +23,23 @@ class Add_Profile extends StatelessWidget {
           title: customWhiteText("Enter Profile Details", 18.h,
               fontWeight: FontWeight.bold),
         ),
-        backgroundColor: ColorConstants.iconRed,
+        backgroundColor: ColorConstants.pinkBackground,
         body: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
             child: Column(
               children: [
-                     Container(
-                        height: 200.h,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.blueAccent)),
-                        child: Center(
-                            child: IconButton(
-                          icon: Icon(Icons.add),
-                          onPressed: () async {
-                            // File? x = await pickImages();
-                          },
-                        ))),
+                Container(
+                    height: 200.h,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.blueAccent)),
+                    child: Center(
+                        child: IconButton(
+                      icon: Icon(Icons.add),
+                      onPressed: () async {
+                        // File? x = await pickImages();
+                      },
+                    ))),
                 SizedBox(
                   height: 16.h,
                 ),

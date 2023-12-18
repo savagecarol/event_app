@@ -55,7 +55,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   height: 42.h,
                   child: FloatingActionButton(
                     onPressed: () {},
-                    backgroundColor: ColorConstants.iconRed,
+                    backgroundColor: ColorConstants.pinkBackground,
                     elevation: 0,
                     child: Icon(
                       Icons.send_rounded,

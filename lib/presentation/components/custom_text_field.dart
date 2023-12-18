@@ -39,7 +39,7 @@ class CustomTextField extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  border: Border.all(width: 1, color: Colors.black),
+                  // border: Border.all(width: 1, color: Colors.black),
                   boxShadow: [
                     BoxShadow(
                         color: Colors.black.withOpacity(.1),
