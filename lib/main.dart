@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
               hintColor: ColorConstants.orange,
               scaffoldBackgroundColor: ColorConstants.pinkBackground,
               appBarTheme: const AppBarTheme(
-                  backgroundColor: ColorConstants.alizarinCrimson,
+                  backgroundColor: ColorConstants.pinkBackground,
                   elevation: 0),
             ),
             getPages: [

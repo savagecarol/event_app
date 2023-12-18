@@ -33,6 +33,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
     super.dispose();
   }
 
+
   List<Container> imageContainerList =
       List.generate(trendingList.length, (index) {
     return Container(
@@ -62,7 +63,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
     return customScaffold(
             appBar: AppBar(
                toolbarHeight: 60.h,
-              backgroundColor: ColorConstants.white,
+              backgroundColor: ColorConstants.pinkBackground,
               title: Container(
                 margin: EdgeInsets.only(top : 16.h),
                 child: Row(
@@ -74,7 +75,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                       }
                       return Container(
                         decoration: BoxDecoration(
-                            color: ColorConstants.amberColor,
+                            color: ColorConstants.white,
                             shape: BoxShape.circle),
                         child: CloseButton(
                           color: ColorConstants.red,
@@ -88,7 +89,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                 ),
               ),
             ),
-            backgroundColor: ColorConstants.white,
+            backgroundColor: ColorConstants.pinkBackground,
             body: Obx(() {
               if (globalController.globalvariable.value.partyAnimation) {
                 return Center(
@@ -108,7 +109,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 32.h,
+                    height: 64.h,
                   ),
                   Expanded(
                     child: PageView.builder(
@@ -126,15 +127,25 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                       controller: controller,
                       count: imageContainerList.length,
                       effect: WormEffect(
-                        dotColor: ColorConstants.grey1,
-                        activeDotColor: ColorConstants.red,
+                        dotColor: ColorConstants.white,
+                        activeDotColor: ColorConstants.black,
                         dotHeight: 8.h,
                         dotWidth: 8.w,
                         type: WormType.underground,
                       )),
                   SizedBox(
-                    height: 64.h,
+                    height: 8.h,
                   ),
+                   Center(
+              child: customImage(
+                   baseContianer: Container(),
+                  boxFit: BoxFit.contain,
+                  isNetwork: false,
+                  imageUrl: StringConstants.appIcon2,
+                  height: 96.h,
+                  width: 96.w,
+                  shape: BoxShape.circle),
+            ),
                 ],
               ));
             }));

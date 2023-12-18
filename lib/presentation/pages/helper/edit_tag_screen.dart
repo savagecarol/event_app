@@ -23,15 +23,16 @@ class _EditTagScreenState extends State<EditTagScreen> {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
-      backgroundColor:  ColorConstants.accentRed,
+      backgroundColor:  ColorConstants.pinkBackground,
       appBar: AppBar(
           leading: IconButton(
             onPressed: () {
               Get.back();
             },
-            icon: Icon(Icons.arrow_back),
+             icon: Icon(Icons.arrow_back , color: ColorConstants.white,),
+
           ),
-          title: customWhiteText("Enter Profile Details", 18.h,
+          title: customWhiteText("Tags", 18.h,
               fontWeight: FontWeight.bold),
         ),
         body: Padding(
@@ -44,12 +45,7 @@ class _EditTagScreenState extends State<EditTagScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                              customWhiteText("Tags", 24.sp , fontWeight: FontWeight.bold),
-                  SizedBox(
-                  height: 16.h,
-                              ) , 
                         
-
     Builder(
       builder: (context) {
         return Column(
@@ -59,7 +55,7 @@ class _EditTagScreenState extends State<EditTagScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                   customWhiteText(popularList[i].name, 18.sp ,fontWeight:  FontWeight.bold),
+                   customWhiteText(popularList[i].name, 20.sp ,fontWeight:FontWeight.bold),
                          SizedBox(
                         height: 8.h,
                               ) ,
@@ -67,7 +63,7 @@ class _EditTagScreenState extends State<EditTagScreen> {
                     spacing: 8.h,
                     children: [
                     for (int i = 0; i < chipList.length; i++)
-                         chips(chipList[i], ColorConstants.white, Colors.black, 14.sp, fontWeight: FontWeight.w500)
+                         chips(chipList[i], ColorConstants.white, Colors.black, 14.sp, fontWeight: FontWeight.w800)
                       ],
                     ),
                        SizedBox(
@@ -100,11 +96,11 @@ class _EditTagScreenState extends State<EditTagScreen> {
                     containerColor: ColorConstants.white,
                     shadowColor: ColorConstants.white,
                     labelText: "Submit",
-                    visiblepostIcon: true,
+                    visiblepostIcon: false,
                     labelTextWeight: FontWeight.w700,
                     postIcon: Icons.arrow_forward_rounded,
-                    sizelabelText: 24.sp,
-                    postIconSize: 24.sp,
+                    sizelabelText: 16.sp,
+                    postIconSize: 16.sp,
                   ),
               ),
             ],

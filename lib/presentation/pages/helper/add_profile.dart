@@ -1,9 +1,7 @@
-import 'dart:io';
 import 'package:connect/presentation/components/custom_button.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/presentation/components/custom_text_field.dart';
 import 'package:connect/utils/colors_constants.dart';
-import 'package:connect/utils/global.dart';
 import 'package:connect/utils/string_constants.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
@@ -16,12 +14,12 @@ class Add_Profile extends StatelessWidget {
     return customScaffold(
         appBar: AppBar(
           backgroundColor: ColorConstants.pinkBackground,
-          leading: IconButton(
-            onPressed: () {
-              Get.offAllNamed(Urlconstants.authUrl);
-            },
-            icon: Icon(Icons.arrow_back , color: ColorConstants.white,),
-          ),
+          // leading: IconButton(
+          //   onPressed: () {
+          //     Get.offAllNamed(Urlconstants.authUrl);
+          //   },
+          //   icon: Icon(Icons.arrow_back , color: ColorConstants.white,),
+          // ),
           title: customWhiteText("Enter Profile Details", 18.h,
               fontWeight: FontWeight.bold),
         ),
@@ -35,32 +33,27 @@ class Add_Profile extends StatelessWidget {
                   child: Column(
                     children: [
                       Container(
-                        height: 90.h,
-                        width: 90.h,
                         decoration: BoxDecoration(
+                          shape: BoxShape.circle,
                             color: Colors.white,
-                            border: Border.all(color: Colors.white, width: 3.0),
-                            borderRadius: BorderRadius.all(Radius.circular(180))),
+                            border: Border.all(color: Colors.white, width: 4.0),
+                            ),
                         child: customImage(
                             boxFit: BoxFit.cover,
                             isNetwork: false,
                             imageUrl: StringConstants.defaultProfileImage,
-                            height: 50.h,
-                            width: 50.w,
+                            height: 128.h,
+                            width: 128.w,
                             shape: BoxShape.circle,
                         baseContianer: Container()),
                       ),
                       SizedBox(
                         height: 8.h,
                       ),
-
-
          InkWell(
            child: customBlackText("Change Profile Photo", 16.h,
                 fontWeight: FontWeight.w500),
          ),
-
-
                       SizedBox(
                         height: 16.h,
                       ),
@@ -105,7 +98,7 @@ class Add_Profile extends StatelessWidget {
                      
                       CustomButton(
                         onTap: () {
-                          Get.offAllNamed(Urlconstants.editTagsUrl);
+                          Get.toNamed(Urlconstants.editTagsUrl);
                         },
                         containerColor: ColorConstants.white,
                         shadowColor: ColorConstants.white,
