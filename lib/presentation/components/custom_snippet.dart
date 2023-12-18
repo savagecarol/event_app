@@ -2,10 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/route_manager.dart';
 
 Widget customScaffold(
     {PreferredSizeWidget? appBar,
+    BottomNavigationBar? bottomNavigationBar,
     required Widget body,
     backgroundColor = ColorConstants.white}) {
   return SafeArea(
@@ -14,6 +14,7 @@ Widget customScaffold(
       resizeToAvoidBottomInset: false,
       appBar: appBar,
       body: body,
+      bottomNavigationBar: bottomNavigationBar , 
     ),
   );
 }

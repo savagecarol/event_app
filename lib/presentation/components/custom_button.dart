@@ -53,7 +53,7 @@ class CustomButton extends StatelessWidget {
                           style: TextStyle(
                             color: labelTextColor,
                               fontFamily: 'Montserrat',
-                              fontSize: 18,
+                              fontSize: sizelabelText,
                               fontWeight: labelTextWeight)),
                       Container(
                         child: (visiblepostIcon)
@@ -66,9 +66,9 @@ class CustomButton extends StatelessWidget {
                       ),
                     ],
                   )
-                : SizedBox(
-                    height: 20,
-                    width: 20,
+                :  SizedBox(
+                    height: sizelabelText,
+                    width: sizelabelText,
                     child: LottieBuilder.asset(StringConstants.loader),
                   ),
           ),

@@ -1,8 +1,6 @@
 import 'dart:io';
-
 import 'package:connect/presentation/components/custom_button.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
-import 'package:connect/presentation/components/custom_text_button.dart';
 import 'package:connect/presentation/components/custom_text_field.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/global.dart';
@@ -15,119 +13,135 @@ import 'package:get/get.dart';
 class Add_Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var textFieldList = ["Name", "DOB", "Mobile", "Interests"];
     return customScaffold(
         appBar: AppBar(
+          backgroundColor: ColorConstants.pinkBackground,
           leading: IconButton(
             onPressed: () {
               Get.offAllNamed(Urlconstants.authUrl);
             },
-            icon: Icon(Icons.arrow_back),
+            icon: Icon(Icons.arrow_back , color: ColorConstants.white,),
           ),
           title: customWhiteText("Enter Profile Details", 18.h,
               fontWeight: FontWeight.bold),
         ),
-        backgroundColor: ColorConstants.iconRed,
-        body: SingleChildScrollView(
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
-            child: Column(
-              children: [
-                Container(
-                  height: 180.h,
-                  width: 180.h,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.white, width: 3.0),
-                      borderRadius: BorderRadius.all(Radius.circular(180))),
-                  child: customImage(
-                      boxFit: BoxFit.cover,
-                      isNetwork: false,
-                      imageUrl: StringConstants.defaultProfileImage,
-                      height: 50.h,
-                      width: 50.w,
-                      shape: BoxShape.circle,
-                  baseContianer: Container()),
+        backgroundColor: ColorConstants.pinkBackground,
+        body:  Column(
+           children: [
+             Expanded(
+              child: SingleChildScrollView(
+                child: Container(
+                  padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 90.h,
+                        width: 90.h,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(color: Colors.white, width: 3.0),
+                            borderRadius: BorderRadius.all(Radius.circular(180))),
+                        child: customImage(
+                            boxFit: BoxFit.cover,
+                            isNetwork: false,
+                            imageUrl: StringConstants.defaultProfileImage,
+                            height: 50.h,
+                            width: 50.w,
+                            shape: BoxShape.circle,
+                        baseContianer: Container()),
+                      ),
+                      SizedBox(
+                        height: 8.h,
+                      ),
+
+
+         InkWell(
+           child: customBlackText("Change Profile Photo", 16.h,
+                fontWeight: FontWeight.w500),
+         ),
+
+
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CustomTextField(
+                        hintText: "Enter your first Name",
+                        onChange: (Value) => {},
+                        initialValue: '',
+                      ),
+
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CustomTextField(
+                        hintText: "Enter your Last Name",
+                        onChange: (Value) => {},
+                        initialValue: '',
+                      ),
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                      CustomTextField(
+                        icon: Icons.calendar_month,
+                        isPrefixIcon: true,
+                        hintText: "Date of Birth",
+                        initialValue: '',
+                        isEnable: false,
+                        onChange: (Value) {},
+                        onTap: () async {
+                          DateTime? pickedDate = await showDatePicker(
+                              context: context,
+                              initialDate: DateTime.now(),
+                              firstDate: DateTime(1950),
+                              lastDate: DateTime(2050));
+                          if (pickedDate != null) {
+                            // dateController.text = DateFormat('dd MMMM yyyy').format(pickedDate);
+                          }
+                        },
+                      ),
+                      SizedBox(
+                        height: 16.h,
+                      ),
+                     
+                      CustomButton(
+                        onTap: () {
+                          Get.offAllNamed(Urlconstants.editTagsUrl);
+                        },
+                        containerColor: ColorConstants.white,
+                        shadowColor: ColorConstants.white,
+                        labelText: "Submit",
+                        visiblepostIcon: false,
+                        labelTextWeight: FontWeight.w700,
+                        postIcon: Icons.arrow_forward_rounded,
+                        sizelabelText: 16.sp,
+                        postIconSize: 16.sp,
+                      ),
+                    ],
+                  ),
                 ),
-                SizedBox(
-                  height: 8.h,
-                ),
-                CustomButton(
-                  shadowColor: ColorConstants.iconRed,
-                  containerColor: ColorConstants.iconRed,
-                  labelText: "Change Profile Photo",
-                  labelTextColor: Colors.black,
-                  onTap: () async {
-                    File? x = await pickImages();
-                  },
-                ),
-                SizedBox(
-                  height: 16.h,
-                ),
-                CustomTextField(
-                  hintText: "Enter your ${textFieldList[0]}",
-                  onChange: (Value) => {},
-                  initialValue: '',
-                ),
-                SizedBox(
-                  height: 16.h,
-                ),
-                CustomTextField(
-                  icon: Icons.calendar_month,
-                  isPrefixIcon: true,
-                  hintText: "Enter event time",
-                  initialValue: '',
-                  isEnable: false,
-                  onChange: (Value) {},
-                  onTap: () async {
-                    DateTime? pickedDate = await showDatePicker(
-                        context: context,
-                        initialDate: DateTime.now(),
-                        firstDate: DateTime(1950),
-                        lastDate: DateTime(2050));
-                    if (pickedDate != null) {
-                      // dateController.text = DateFormat('dd MMMM yyyy').format(pickedDate);
-                    }
-                  },
-                ),
-                SizedBox(
-                  height: 16.h,
-                ),
-                CustomTextField(
-                  hintText: "Enter your Mobile Number",
-                  onChange: (Value) => {},
-                  initialValue: '',
-                  textInputType: TextInputType.phone,
-                ),
-                SizedBox(
-                  height: 16.h,
-                ),
-                CustomButton(
-                  onTap: () {
-                    Get.offAllNamed(Urlconstants.editTagsUrl);
-                  },
-                  containerColor: ColorConstants.white,
-                  shadowColor: ColorConstants.white,
-                  labelText: "Submit",
-                  visiblepostIcon: true,
-                  labelTextWeight: FontWeight.w700,
-                  postIcon: Icons.arrow_forward_rounded,
-                  sizelabelText: 24.sp,
-                  postIconSize: 24.sp,
-                ),
-                Center(
-                  child: customImage(
-                      boxFit: BoxFit.contain,
-                      isNetwork: false,
-                      imageUrl: StringConstants.appIcon2,
-                      height: 128.h,
-                      width: 128.w,
-                      shape: BoxShape.circle,
-                  baseContianer: Container()),
-                ),
-              ],
+              ),
+             ),
+
+                 Center(
+              child: customImage(
+                baseContianer: Container(),
+                  boxFit: BoxFit.contain,
+                  isNetwork: false,
+                  imageUrl: StringConstants.appIcon2,
+                  height: 96.h,
+                  width: 96.w,
+                  shape: BoxShape.circle),
             ),
-          ),
-        ));
+
+             SizedBox(
+                    height: 8.h,
+                  ),
+
+
+           ],
+         )
+        
+        
+        );
   }
 }

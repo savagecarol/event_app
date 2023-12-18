@@ -1,7 +1,7 @@
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class CustomTextField extends StatelessWidget {
   final String hintText;
@@ -39,7 +39,7 @@ class CustomTextField extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                   color: Colors.white,
-                  border: Border.all(width: 1, color: Colors.black),
+                  // border: Border.all(width: 1, color: Colors.black),
                   boxShadow: [
                     BoxShadow(
                         color: Colors.black.withOpacity(.1),

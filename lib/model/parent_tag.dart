@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class ParentTag {
   String id;
   String name;
