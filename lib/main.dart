@@ -1,5 +1,13 @@
-import 'package:connect/presentation/Auth.dart';
-import 'package:connect/presentation/SplashPage.dart';
+import 'package:connect/presentation/pages/helper/add_profile.dart';
+import 'package:connect/presentation/pages/auth/auth.dart';
+import 'package:connect/presentation/pages/helper/edit_tag_screen.dart';
+import 'package:connect/presentation/pages/helper/get_location.dart';
+import 'package:connect/presentation/pages/screen/app_start.dart';
+import 'package:connect/presentation/pages/auth/otp.dart';
+import 'package:connect/presentation/pages/screen/setting_screen.dart';
+import 'package:connect/presentation/home.dart';
+import 'package:connect/torch/torch.dart';
+import 'package:connect/utils/colors_constants.dart';
 import 'package:connect/utils/string_constants.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
@@ -22,19 +30,50 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         builder: (_, child) {
           return GetMaterialApp(
-            theme: ThemeData(fontFamily: 'Poppins'),
             title: StringConstants.appName,
             debugShowCheckedModeBanner: false,
-            initialRoute: Urlconstants.authUrl,
+            initialRoute: Urlconstants.appStartUrl,
+            theme: ThemeData(
+              fontFamily: 'Poppins',
+              hintColor: ColorConstants.orange,
+              scaffoldBackgroundColor: ColorConstants.pinkBackground,
+              appBarTheme: const AppBarTheme(
+                  backgroundColor: ColorConstants.pinkBackground,
+                  elevation: 0),
+            ),
             getPages: [
               GetPage(
-                name: Urlconstants.firstPageUrl,
-                page: () => SplashPage(),
+                name: Urlconstants.otpUrl,
+                page: () => Otp(),
               ),
+              GetPage(
+                name: Urlconstants.appStartUrl,
+                page: () => AppStart(),
+              ),
+              GetPage(
+                  name: Urlconstants.home,
+                  page: () => Home(),
+                  transition: Transition.downToUp),
               GetPage(
                 name: Urlconstants.authUrl,
                 page: () => Auth(),
               ),
+              GetPage(
+                  name: Urlconstants.addProfileUrl, page: () => Add_Profile()),
+              GetPage(
+                  name: Urlconstants.editTagsUrl, page: () => EditTagScreen()),
+              GetPage(
+                  name: Urlconstants.torchUrl,
+                  page: () => const Torch(),
+                  transition: Transition.circularReveal),
+              GetPage(
+                  name: Urlconstants.settingUrl,
+                  page: () => const SettingScreen(),
+                  transition: Transition.circularReveal),
+            GetPage(
+                  name: Urlconstants.getLocation,
+                  page: () => const GetLocation(),
+                  transition: Transition.circularReveal),
             ],
           );
         });

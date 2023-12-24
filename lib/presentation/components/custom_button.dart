@@ -1,10 +1,16 @@
+import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lottie/lottie.dart';
+
+import '../../utils/string_constants.dart';
 
 class CustomButton extends StatelessWidget {
   final IconData postIcon;
   final bool visiblepostIcon;
   final String labelText;
   final FontWeight labelTextWeight;
+  final Color labelTextColor;
   final double sizelabelText;
   final Function() onTap;
   final double postIconSize;
@@ -20,6 +26,7 @@ class CustomButton extends StatelessWidget {
       this.visiblepostIcon = false,
       this.sizelabelText = 20,
       this.labelTextWeight = FontWeight.w500,
+      this.labelTextColor = ColorConstants.black,
       required this.onTap,
       this.isLoading = false,
       this.postIconSize = 24,
@@ -33,16 +40,7 @@ class CustomButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             color: containerColor,
-            border: Border.all(
-              color: Colors.black,
-              width: 2,
-            ),
-            boxShadow: [
-              BoxShadow(
-                  color: shadowColor.withOpacity(.1),
-                  blurRadius: 3,
-                  offset: Offset(0, 5))
-            ]),
+            borderRadius: BorderRadius.all(Radius.circular(5.r))),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: Center(
@@ -52,8 +50,9 @@ class CustomButton extends StatelessWidget {
                     children: [
                       Text(labelText,
                           style: TextStyle(
+                            color: labelTextColor,
                               fontFamily: 'Montserrat',
-                              fontSize: 18,
+                              fontSize: sizelabelText,
                               fontWeight: labelTextWeight)),
                       Container(
                         child: (visiblepostIcon)
@@ -66,10 +65,10 @@ class CustomButton extends StatelessWidget {
                       ),
                     ],
                   )
-                : const SizedBox(
-                    height: 20,
-                    width: 20,
-                    child: CircularProgressIndicator(color: Colors.black),
+                :  SizedBox(
+                    height: sizelabelText,
+                    width: sizelabelText,
+                    child: LottieBuilder.asset(StringConstants.loader),
                   ),
           ),
         ),

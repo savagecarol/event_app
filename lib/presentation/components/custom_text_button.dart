@@ -1,4 +1,7 @@
+import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class CustomTextButton extends StatelessWidget {
   final String text;
@@ -25,6 +28,12 @@ class CustomTextButton extends StatelessWidget {
     return GestureDetector(
         onTap: onTap,
         child: Container(
+          padding: EdgeInsets.symmetric(vertical: 8.h , horizontal: 12.w),
+          decoration: BoxDecoration(
+          shape: BoxShape.rectangle,
+          color: ColorConstants.white,
+          borderRadius: BorderRadius.all( Radius.circular(8.r))),
+          
           margin: margin,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,3 +48,6 @@ class CustomTextButton extends StatelessWidget {
         ));
   }
 }
+
+
+  
