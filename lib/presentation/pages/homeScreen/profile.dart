@@ -14,7 +14,7 @@ class Profile extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 16.h),
       decoration: BoxDecoration(
           shape: BoxShape.rectangle,
-          color: ColorConstants.alizarinCrimson,
+          color: ColorConstants.lightRed,
           borderRadius: BorderRadius.only(
               bottomRight: Radius.circular(24.r),
               bottomLeft: Radius.circular(24.r))),
@@ -48,7 +48,8 @@ class Profile extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           customWhiteText("Kartikeya", 18.sp,
-                              fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold 
+                              ),
                           customWhiteText("+917830980280", 16.sp),
                         ],
                       ),

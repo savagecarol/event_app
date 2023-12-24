@@ -31,9 +31,10 @@ class Home extends StatelessWidget {
   _getBottomBar() {
     print(globalController.globalvariable.value.counter);
     return Container(
+      width: ScreenUtil.defaultSize.width.spMin,
       decoration: BoxDecoration(
           shape: BoxShape.rectangle,
-          color: ColorConstants.alizarinCrimson,
+          color: ColorConstants.lightRed,
           borderRadius: BorderRadius.all(Radius.circular(24.r))),
       margin: EdgeInsets.only(bottom: 12.h, left: 16.w, right: 16.w),
       child: Row(
@@ -90,12 +91,23 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return customScaffold(
         body: Obx(() {
-          return Column(
-            children: <Widget>[Expanded(child: _getBody()), _getBottomBar()],
+          return Stack(
+            children: [
+          
+              Column(
+                children: <Widget>[Expanded(child: _getBody())],
+              ),
+
+                          Positioned(
+       
+                          bottom: 4.h,
+                          child:               _getBottomBar(),
+                        ),
+             
+            ],
           );
         }),
         backgroundColor: ColorConstants.white,
     );
-
   }
 }

@@ -43,7 +43,7 @@ class _PostScreenState extends State<PostScreen> {
     });
 
     return customScaffold(
-        backgroundColor: ColorConstants.alizarinCrimson,
+        backgroundColor: ColorConstants.lightRed,
         appBar: customAppBar("Post", () {
           Get.back();
         }),
@@ -76,7 +76,7 @@ class _PostScreenState extends State<PostScreen> {
                               controller: controller,
                               count: imageContainerList.length,
                               effect: WormEffect(
-                                dotColor: ColorConstants.grey1,
+                                dotColor: ColorConstants.white,
                                 activeDotColor: ColorConstants.red,
                                 dotHeight: 8.h,
                                 dotWidth: 8.w,
@@ -133,7 +133,7 @@ class _PostScreenState extends State<PostScreen> {
                           chiplist.add(widget.post.tagList[i].tagName);
                         }
                         return chipWrap(
-                            chiplist, Colors.grey.shade300, Colors.black, 12.h,
+                            chiplist, Colors.white, Colors.black, 12.h,
                             fontWeight: FontWeight.w800);
                       }),
                       SizedBox(

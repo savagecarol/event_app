@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class StringConstants {
   static String appName = "connect";
   static const String loader = "assets/animation/loader.json";

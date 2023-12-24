@@ -109,7 +109,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 64.h,
+                    height: 32.h,
                   ),
                   Expanded(
                     child: PageView.builder(

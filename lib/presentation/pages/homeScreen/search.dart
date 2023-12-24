@@ -58,7 +58,7 @@ class _SearchState extends State<Search> {
               Container(
                   margin:
                       EdgeInsets.only(left: 16.w, right: 16.w, bottom: 16.h),
-                  child: customWhiteText("Trending Events", 26.sp,
+                  child: customBlackText("Trending", 26.sp,
                       fontWeight: FontWeight.bold)),
               Column(
                 children: [
@@ -79,7 +79,7 @@ class _SearchState extends State<Search> {
                       controller: controller,
                       count: imageContainerList.length,
                       effect: WormEffect(
-                        dotColor: ColorConstants.grey1,
+                        dotColor: ColorConstants.black,
                         activeDotColor: ColorConstants.red,
                         dotHeight: 8.h,
                         dotWidth: 8.w,
@@ -90,7 +90,7 @@ class _SearchState extends State<Search> {
               Container(
                   margin: EdgeInsets.only(
                       left: 16.w, right: 16.w, bottom: 16.h, top: 16.h),
-                  child: customWhiteText("Popular On Connect", 26.sp,
+                  child: customBlackText("Popular", 26.sp,
                       fontWeight: FontWeight.bold)),
               Container(
                 margin: EdgeInsets.only(left: 16.w, right: 16.w),

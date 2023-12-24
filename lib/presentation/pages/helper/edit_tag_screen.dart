@@ -23,8 +23,9 @@ class _EditTagScreenState extends State<EditTagScreen> {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
-      backgroundColor:  ColorConstants.pinkBackground,
+      backgroundColor:  ColorConstants.lightRed,
       appBar: AppBar(
+        backgroundColor: ColorConstants.lightRed,
           leading: IconButton(
             onPressed: () {
               Get.back();

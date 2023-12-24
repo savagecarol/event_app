@@ -18,12 +18,12 @@ class _TagScreenState extends State<TagScreen> {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
-        backgroundColor: ColorConstants.black,
+        backgroundColor: ColorConstants.white,
         appBar: customAppBar(widget.tagName.tagName, () {
           Get.back();
-        }),
+        } , backgroundColor: ColorConstants.lightRed),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w),
+          padding: EdgeInsets.symmetric(horizontal: 16.w , vertical: 16.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

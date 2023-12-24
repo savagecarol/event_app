@@ -14,20 +14,20 @@ Widget customScaffold(
       resizeToAvoidBottomInset: false,
       appBar: appBar,
       body: body,
-      bottomNavigationBar: bottomNavigationBar , 
+      bottomNavigationBar: bottomNavigationBar,
     ),
   );
 }
 
-Widget customImage(
-    {required BoxFit boxFit,
-    required String imageUrl,
-    required Widget baseContianer,
-    required double width,
-    required isNetwork,
-    required double height,
-    required BoxShape shape,
-    }) {
+Widget customImage({
+  required BoxFit boxFit,
+  required String imageUrl,
+  required Widget baseContianer,
+  required double width,
+  required isNetwork,
+  required double height,
+  required BoxShape shape,
+}) {
   return Container(
     height: height,
     width: width,
@@ -56,10 +56,11 @@ Widget customBlackText(String text, double fontSize,
 }
 
 Widget customWhiteText(String text, double fontSize,
-    {FontWeight fontWeight = FontWeight.normal}) {
+    {FontWeight fontWeight = FontWeight.normal , decoration: TextDecoration.none }) {
   return Text(
     text,
     style: TextStyle(
+         decoration: decoration , 
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: ColorConstants.white),
@@ -127,32 +128,30 @@ Widget crossChips(String text, Color color, Color textColor, double fontSize,
                 ? customBlackText(text, fontSize, fontWeight: fontWeight)
                 : customWhiteText(text, fontSize, fontWeight: fontWeight),
           ),
-            Icon(
-             Icons.clear,
-             size: 18.sp,
-                color: ColorConstants.black,
-           ) ,
-           
-          
+          Icon(
+            Icons.clear,
+            size: 18.sp,
+            color: ColorConstants.black,
+          ),
         ],
       ));
 }
 
-AppBar customAppBar(heading , onTap ) {
+AppBar customAppBar(heading, onTap,
+    {backgroundColor: ColorConstants.lightRed}) {
   return AppBar(
     leading: Builder(
       builder: (BuildContext context) {
         return InkWell(
-          child: const Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
-          onTap: onTap
-        );
+            child:  Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            ),
+            onTap: onTap);
       },
     ),
     elevation: 0.0,
-    backgroundColor: ColorConstants.alizarinCrimson,
+    backgroundColor: backgroundColor,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

@@ -32,8 +32,10 @@ class Otp extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    customWhiteText("We have sent an OTP", 18.sp,
+                            fontWeight: FontWeight.w700),
                     SizedBox(
-                      height: 24.h,
+                      height: 16.h,
                     ),
                     CustomTextField(
                         hintText: "Enter Otp",

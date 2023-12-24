@@ -1,7 +1,6 @@
 import 'package:connect/utils/colors_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../utils/string_constants.dart';

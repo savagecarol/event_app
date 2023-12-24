@@ -23,8 +23,9 @@ class _ParentTagScreenState extends State<ParentTagScreen> {
         appBar: customAppBar(widget.parentTag.name, () {
           Get.back();
         }),
-        body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 16.w),
+        body: Container(
+          color: ColorConstants.white,
+          padding: EdgeInsets.symmetric(horizontal: 16.w , vertical: 16.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -40,7 +41,7 @@ class _ParentTagScreenState extends State<ParentTagScreen> {
                           return Container(
                             margin: EdgeInsets.only(right: 8.w),
                             child: crossChips(postList[0].tagList[i].tagName,
-                                ColorConstants.red, Colors.white, 12.sp,
+                                ColorConstants.lightRed, Colors.white, 12.sp,
                                 fontWeight: FontWeight.bold),
                           );
                         }),

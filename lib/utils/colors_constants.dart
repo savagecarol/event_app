@@ -20,6 +20,7 @@ class ColorConstants {
 
 //  NEW
   static const Color pinkBackground =  Color.fromRGBO(255, 128, 128, 1); // Main Background color
+  // static const Color pinkBackground =  Color.fromRGBO(255, 111, 112, 1);
   static const Color creameColor =  Color.fromRGBO(255, 207, 150, 1); // Header and Accent color
   static const Color yellowColor =  Color.fromRGBO(246, 253, 195, 1); //Text color
   static const Color emerald =  Color.fromRGBO(39, 174, 96, 1); // Button color
