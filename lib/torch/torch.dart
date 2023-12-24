@@ -35,13 +35,13 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
 
 
   List<Container> imageContainerList =
-      List.generate(trendingList.length, (index) {
+      List.generate(torchList.length, (index) {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12.r),
           color: Colors.grey.shade300,
           image: DecorationImage(
-              image: CachedNetworkImageProvider(trendingList[index].images[0]),
+              image: AssetImage(torchList[index].images[0]),
               fit: BoxFit.fill)),
       margin: EdgeInsets.symmetric(horizontal: 8.w),
       child: Padding(
@@ -50,7 +50,7 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            customWhiteText(trendingList[index].title, 18.sp,
+            customWhiteText(torchList[index].title, 18.sp,
                 fontWeight: FontWeight.w600)
           ],
         ),
@@ -109,14 +109,14 @@ class _TorchState extends State<Torch> with TickerProviderStateMixin {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    height: 32.h,
+                    height: 16.h,
                   ),
                   Expanded(
                     child: PageView.builder(
                       controller: controller,
                       itemCount: imageContainerList.length,
                       itemBuilder: (_, index) {
-                        return imageContainerList[index % trendingList.length];
+                        return imageContainerList[index % torchList.length];
                       },
                     ),
                   ),

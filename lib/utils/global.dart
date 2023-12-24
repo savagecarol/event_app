@@ -292,3 +292,86 @@ List<Post> trendingList = [
         "https://www.thegolfinghub.com/wp-content/uploads/2022/08/DELHI_BADMINTON.jpg"
       ]),
 ];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+List<Post> torchList = [
+    Post(
+      postRenderEnum: PostRenderEnum.intrested,
+      userId: "dsfdsfdsf",
+      id: "121212",
+      userName: "@RandomSundar guy",
+      name: "Sundar Pichai",
+      eventTime: DateTime.now(),
+      title: "Step 1",
+      description:
+          "i am going online tomorrow for cycling event looking for a partner age 24 for this event",
+      tagList: [
+        TagName(id: "12", tagName: "Cycling"),
+        TagName(id: "123", tagName: "Badminton")
+      ],
+      images: [
+        "assets/snapshot/three.png",
+      ]),
+
+  Post(
+      postRenderEnum: PostRenderEnum.approval,
+      userId: "dsfdsfdsf",
+      id: "121212",
+      userName: "@savageCarol",
+      name: "Kartikeya Sharma",
+      eventTime: DateTime.now(),
+     title: "Step 2",
+      description: "Tomorrow there is music fest at abes college looking for parnter to attend with me ",
+      tagList: [
+        TagName(id: "12", tagName: "Music"),
+        TagName(id: "123", tagName: "Art")
+      ],
+      images: ["assets/snapshot/four.png",
+      ]),
+  Post(
+      postRenderEnum: PostRenderEnum.message,
+      userId: "dsfdsfdsf",
+      id: "121212",
+      userName: "@savageCarol",
+      name: "Kartikeya Sharma",
+      eventTime: DateTime.now(),
+     title: "Step 3",
+      description: "",
+      tagList: [
+        TagName(id: "12", tagName: "Badminton"),
+        TagName(id: "123", tagName: "Tennis")
+      ],
+      images: [
+            "assets/snapshot/five.png",
+      ]),
+
+       Post(
+      postRenderEnum: PostRenderEnum.message,
+      userId: "dsfdsfdsf",
+      id: "121212",
+      userName: "@savageCarol",
+      name: "Kartikeya Sharma",
+      eventTime: DateTime.now(),
+     title: "Step 4",
+      description: "",
+      tagList: [
+        TagName(id: "12", tagName: "Badminton"),
+        TagName(id: "123", tagName: "Tennis")
+      ],
+      images: [
+            "assets/snapshot/six.png",
+      ]),
+];
+
