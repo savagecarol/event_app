@@ -14,7 +14,7 @@ class Profile extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 16.h),
       decoration: BoxDecoration(
           shape: BoxShape.rectangle,
-          color: ColorConstants.red,
+          color: ColorConstants.alizarinCrimson,
           borderRadius: BorderRadius.only(
               bottomRight: Radius.circular(24.r),
               bottomLeft: Radius.circular(24.r))),
@@ -101,7 +101,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
-        backgroundColor: ColorConstants.black,
+      backgroundColor: ColorConstants.white,
         body: Column(
       children: [
         profileBox(),

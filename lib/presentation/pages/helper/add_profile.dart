@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:connect/presentation/components/custom_button.dart';
 import 'package:connect/presentation/components/custom_snippet.dart';
 import 'package:connect/presentation/components/custom_text_field.dart';
 import 'package:connect/utils/colors_constants.dart';
+import 'package:connect/utils/global.dart';
 import 'package:connect/utils/string_constants.dart';
 import 'package:connect/utils/url_constants.dart';
 import 'package:flutter/material.dart';
@@ -24,20 +27,21 @@ class Add_Profile extends StatelessWidget {
               fontWeight: FontWeight.bold),
         ),
         backgroundColor: ColorConstants.pinkBackground,
-        body:  Column(
-           children: [
-             Expanded(
+        body: Column(
+          children: [
+            Expanded(
               child: SingleChildScrollView(
                 child: Container(
-                  padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
+                  padding:
+                      EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
                   child: Column(
                     children: [
                       Container(
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                            color: Colors.white,
-                            border: Border.all(color: Colors.white, width: 4.0),
-                            ),
+                          color: Colors.white,
+                          border: Border.all(color: Colors.white, width: 4.0),
+                        ),
                         child: customImage(
                             boxFit: BoxFit.cover,
                             isNetwork: false,
@@ -45,15 +49,19 @@ class Add_Profile extends StatelessWidget {
                             height: 128.h,
                             width: 128.w,
                             shape: BoxShape.circle,
-                        baseContianer: Container()),
+                            baseContianer: Container()),
                       ),
                       SizedBox(
                         height: 8.h,
                       ),
-         InkWell(
-           child: customBlackText("Change Profile Photo", 16.h,
-                fontWeight: FontWeight.w500),
-         ),
+                      InkWell(
+                        onTap: () async {
+                          File? y = await pickImages();
+
+                        },
+                        child: customBlackText("Change Profile Photo", 16.h,
+                            fontWeight: FontWeight.w500),
+                      ),
                       SizedBox(
                         height: 16.h,
                       ),
@@ -62,7 +70,6 @@ class Add_Profile extends StatelessWidget {
                         onChange: (Value) => {},
                         initialValue: '',
                       ),
-
                       SizedBox(
                         height: 16.h,
                       ),
@@ -95,7 +102,6 @@ class Add_Profile extends StatelessWidget {
                       SizedBox(
                         height: 16.h,
                       ),
-                     
                       CustomButton(
                         onTap: () {
                           Get.toNamed(Urlconstants.editTagsUrl);
@@ -113,11 +119,10 @@ class Add_Profile extends StatelessWidget {
                   ),
                 ),
               ),
-             ),
-
-                 Center(
+            ),
+            Center(
               child: customImage(
-                baseContianer: Container(),
+                  baseContianer: Container(),
                   boxFit: BoxFit.contain,
                   isNetwork: false,
                   imageUrl: StringConstants.appIcon2,
@@ -125,16 +130,10 @@ class Add_Profile extends StatelessWidget {
                   width: 96.w,
                   shape: BoxShape.circle),
             ),
-
-             SizedBox(
-                    height: 8.h,
-                  ),
-
-
-           ],
-         )
-        
-        
-        );
+            SizedBox(
+              height: 8.h,
+            ),
+          ],
+        ));
   }
 }

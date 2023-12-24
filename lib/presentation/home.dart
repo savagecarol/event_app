@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
           shape: BoxShape.rectangle,
-          color: ColorConstants.red,
+          color: ColorConstants.alizarinCrimson,
           borderRadius: BorderRadius.all(Radius.circular(24.r))),
       margin: EdgeInsets.only(bottom: 12.h, left: 16.w, right: 16.w),
       child: Row(
@@ -94,7 +94,7 @@ class Home extends StatelessWidget {
             children: <Widget>[Expanded(child: _getBody()), _getBottomBar()],
           );
         }),
-        backgroundColor: ColorConstants.black,
+        backgroundColor: ColorConstants.white,
     );
 
   }

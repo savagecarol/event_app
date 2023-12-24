@@ -29,6 +29,6 @@ class ColorConstants {
   static const Color amethyst =  Color.fromRGBO(155, 89, 182, 1); //Link color
   static const Color turquoise = Color.fromRGBO(46, 204, 113, 1); // Success/Positive Feedback Color
   static const Color alizarinCrimson =  Color.fromRGBO(231, 76, 60, 1); //Error/ Negative Feedback color
-    static const Color white = Color.fromRGBO(255,255,255,1);
-  static const Color black =  Color.fromRGBO(38, 38, 38, 1);
+  static const Color white = Color.fromRGBO(255,255,255,1);
+ static const Color black =  Color.fromRGBO(38, 38, 38, 1);
 }

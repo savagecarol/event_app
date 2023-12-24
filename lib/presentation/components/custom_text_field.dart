@@ -70,7 +70,7 @@ class CustomTextField extends StatelessWidget {
                             : null,
                         hintStyle: const TextStyle(
                           color: ColorConstants.black,
-                            fontSize: 16, fontWeight: FontWeight.w800))),
+                            fontSize: 16, fontWeight: FontWeight.normal))),
               ),
             ),
     );

@@ -113,10 +113,10 @@ class CustomPostCard extends StatelessWidget {
                 Icon(
                   Icons.link,
                   size: 24.h,
-                  color: ColorConstants.white,
+                  color: ColorConstants.black,
                 ),
                 Icon(Icons.location_on,
-                    size: 24.h, color: ColorConstants.white)
+                    size: 24.h, color: ColorConstants.black)
               ],
             )
           ]),

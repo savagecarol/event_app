@@ -14,14 +14,14 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return customScaffold(
+      
         appBar: customAppBar("Settings", () {
           Get.back();
         }),
-          backgroundColor: ColorConstants.black,
+          backgroundColor: ColorConstants.alizarinCrimson,
       body: SingleChildScrollView(
       child: Padding(
       padding: EdgeInsets.symmetric(vertical : 16.h ,horizontal :16.w),
-
         child: Column(
           children: [      
             CustomTextButton(
@@ -55,11 +55,11 @@ class SettingScreen extends StatelessWidget {
                   containerColor: ColorConstants.white,
                   shadowColor: ColorConstants.white,
                   labelText: "Log Out ",
-                  visiblepostIcon: true,
+                  visiblepostIcon: false,
                   labelTextWeight: FontWeight.w700,
                   postIcon: Icons.arrow_forward_rounded,
-                  sizelabelText: 24.sp,
-                  postIconSize: 24.sp,
+                  sizelabelText: 16.sp,
+                  postIconSize: 16.sp,
                 ),
           ],
         ),  

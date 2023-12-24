@@ -152,11 +152,11 @@ AppBar customAppBar(heading , onTap ) {
       },
     ),
     elevation: 0.0,
-    backgroundColor: ColorConstants.black,
+    backgroundColor: ColorConstants.alizarinCrimson,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        customWhiteText(heading, 18.h, fontWeight: FontWeight.bold),
+        customWhiteText(heading, 20.h, fontWeight: FontWeight.bold),
       ],
     ),
   );

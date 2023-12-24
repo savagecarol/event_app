@@ -43,7 +43,7 @@ class _PostScreenState extends State<PostScreen> {
     });
 
     return customScaffold(
-        backgroundColor: ColorConstants.black,
+        backgroundColor: ColorConstants.alizarinCrimson,
         appBar: customAppBar("Post", () {
           Get.back();
         }),
