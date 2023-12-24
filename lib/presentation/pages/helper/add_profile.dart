@@ -57,9 +57,9 @@ class Add_Profile extends StatelessWidget {
                       InkWell(
                         onTap: () async {
                           File? y = await pickImages();
+                          print(y);
                         },
-                        child: customWhiteText(
-                          "Change Profile Photo", 18.h,
+                        child: customWhiteText("Change Profile Photo", 18.h,
                             fontWeight: FontWeight.w400),
                       ),
                       SizedBox(

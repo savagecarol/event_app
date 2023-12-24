@@ -34,7 +34,7 @@ class Profile extends StatelessWidget {
                       margin: EdgeInsets.only(right: 10.h),
                       child: customImage(
                           imageUrl:
-                              "https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg",
+                              "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sundar_Pichai_%282023%29_cropped.jpg/220px-Sundar_Pichai_%282023%29_cropped.jpg",
                           height: 60.h,
                           width: 60.h,
                           boxFit: BoxFit.fill,
@@ -47,10 +47,10 @@ class Profile extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          customWhiteText("Kartikeya", 18.sp,
+                          customWhiteText("Sundar Pichai", 18.sp,
                               fontWeight: FontWeight.bold 
                               ),
-                          customWhiteText("+917830980280", 16.sp),
+                          customWhiteText("+919389857224", 16.sp),
                         ],
                       ),
                     )

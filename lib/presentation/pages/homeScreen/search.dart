@@ -98,7 +98,7 @@ class _SearchState extends State<Search> {
                   spacing: 16.w,
                   runSpacing: 16.h,
                   children: [
-                    for (int i = 0; i < popularList.length - 1; i++)
+                    for (int i = 0; i < popularList.length -  1; i++)
                       Row(
                         children: [
                           Expanded(
@@ -164,6 +164,8 @@ class _SearchState extends State<Search> {
                                   )),
                             ),
                           ),
+
+                          SizedBox(height: 64.h,),
                         ],
                       )
                   ],

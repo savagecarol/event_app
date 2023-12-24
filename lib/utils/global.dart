@@ -118,21 +118,20 @@ List<Post> postList = [
       postRenderEnum: PostRenderEnum.intrested,
       userId: "dsfdsfdsf",
       id: "121212",
-      userName: "@savageCarol",
-      name: "Kartikeya Sharma",
+      userName: "@RandomSundar guy",
+      name: "Sundar Pichai",
       eventTime: DateTime.now(),
-      title: "lets play game ",
+      title: "Lets Ride",
       description:
-          "we are organinzing the sports event tomorrow with my fiends in the sport complex come on guys we will have fun lets do it",
+          "i am going online tomorrow for cycling event looking for a partner age 24 for this event",
       tagList: [
-        TagName(id: "12", tagName: "Cricket"),
-        TagName(id: "123", tagName: "Cricket")
+        TagName(id: "12", tagName: "Cycling"),
+        TagName(id: "123", tagName: "Badminton")
       ],
       images: [
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"
+        "https://velocrushindia.com/wp-content/uploads/2016/05/photo-1517649763962-0c623066013b.jpg",
+        "https://cyclingmonks.com/wp-content/uploads/2021/01/Amateur-Bicycle-Races-in-India.jpg",
+        "https://rukminim1.flixcart.com/image/850/1000/xif0q/cycle/n/x/l/old-skool-26t-cycle-26-23-east-coast-115-single-speed-original-imagmzejgzzyd2ga.jpeg?q=90",
       ]),
   Post(
       postRenderEnum: PostRenderEnum.message,
@@ -142,13 +141,14 @@ List<Post> postList = [
       name: "Kartikeya Sharma",
       eventTime: DateTime.now(),
       title: "lets play game ",
-      description: "",
+      description: "tomorrow there is cricket event in my colony sector 52 , d block we are looking for people to join us to play ",
       tagList: [
         TagName(id: "12", tagName: "Cricket"),
-        TagName(id: "123", tagName: "Cricket")
+        TagName(id: "123", tagName: "sports")
       ],
       images: [
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"
+        "https://in.boredgamecompany.com/wp-content/uploads/2022/05/Package_Print-2-2-scaled.jpg" , 
+        "https://upload.wikimedia.org/wikipedia/commons/9/98/%27Gully_Cricket%27_played_on_racecourse_grounds..JPG"
       ]),
   Post(
       postRenderEnum: PostRenderEnum.approval,
@@ -157,14 +157,15 @@ List<Post> postList = [
       userName: "@savageCarol",
       name: "Kartikeya Sharma",
       eventTime: DateTime.now(),
-      title: "lets play game ",
-      description: "",
+      title: "Music Night ",
+      description: "Tomorrow there is music fest at abes college looking for parnter to attend with me ",
       tagList: [
-        TagName(id: "12", tagName: "Cricket"),
-        TagName(id: "123", tagName: "Cricket")
+        TagName(id: "12", tagName: "Music"),
+        TagName(id: "123", tagName: "Art")
       ],
       images: [
-        "https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg"
+        "https://unwindpune.in/wp-content/uploads/2022/01/Saturday-Night-Live-Music-Pune.jpg",
+        "https://s3.envato.com/files/186588256/Preview.jpg"
       ]),
 ];
 
@@ -173,37 +174,37 @@ List<ParentTag> popularList = [
       id: "121212",
       name: "Sports",
       image:
-          "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+          "https://img.freepik.com/premium-vector/sport-fans-stadium-people-black-silhouettes-stadium-background-soccer-football-match-spotlight-team-supporters-stand-hand-flag-posters-arena-cartoon-vector-championship-concept_176411-2762.jpg?w=2000",
       popular: true),
   ParentTag(
       id: "121212",
-      name: "Online",
+      name: "Online games",
       image:
-          "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+          "https://wallpaper.dog/large/10699147.jpg",
       popular: true),
   ParentTag(
       id: "121212",
-      name: "Health",
+      name: "Art",
       image:
-          "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+          "https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,f_auto,h_400,q_60,w_600/v1/classpop/64c1630c78597.jpg",
       popular: true),
   ParentTag(
       id: "121212",
-      name: "Health",
+      name: "Money",
       image:
-          "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+          "https://www.shutterstock.com/shutterstock/videos/16504738/thumb/1.jpg",
       popular: true),
   ParentTag(
       id: "121212",
-      name: "Health",
+      name: "Comedy",
       image:
-          "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+          "https://cdn.britannica.com/84/105184-050-DF02936A/Charlie-Chaplin-Little-Tramp.jpg",
       popular: true),
   ParentTag(
       id: "121212",
-      name: "Health",
+      name: "Motivational",
       image:
-          "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg",
+          "https://www.simplilearn.com/ice9/free_resources_article_thumb/theories_of_motivation.jpg",
       popular: true),
 ];
 
@@ -221,21 +222,41 @@ List<String> chipList = [
 ];
 
 List<Post> trendingList = [
-  Post(
+    Post(
       postRenderEnum: PostRenderEnum.intrested,
+      userId: "dsfdsfdsf",
+      id: "121212",
+      userName: "@RandomSundar guy",
+      name: "Sundar Pichai",
+      eventTime: DateTime.now(),
+      title: "Lets Ride",
+      description:
+          "i am going online tomorrow for cycling event looking for a partner age 24 for this event",
+      tagList: [
+        TagName(id: "12", tagName: "Cycling"),
+        TagName(id: "123", tagName: "Badminton")
+      ],
+      images: [
+        "https://velocrushindia.com/wp-content/uploads/2016/05/photo-1517649763962-0c623066013b.jpg",
+        "https://cyclingmonks.com/wp-content/uploads/2021/01/Amateur-Bicycle-Races-in-India.jpg",
+        "https://rukminim1.flixcart.com/image/850/1000/xif0q/cycle/n/x/l/old-skool-26t-cycle-26-23-east-coast-115-single-speed-original-imagmzejgzzyd2ga.jpeg?q=90",
+      ]),
+  Post(
+      postRenderEnum: PostRenderEnum.message,
       userId: "dsfdsfdsf",
       id: "121212",
       userName: "@savageCarol",
       name: "Kartikeya Sharma",
       eventTime: DateTime.now(),
       title: "lets play game ",
-      description: "",
+      description: "tomorrow there is cricket event in my colony sector 52 , d block we are looking for people to join us to play ",
       tagList: [
         TagName(id: "12", tagName: "Cricket"),
-        TagName(id: "123", tagName: "Cricket")
+        TagName(id: "123", tagName: "sports")
       ],
       images: [
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"
+        "https://in.boredgamecompany.com/wp-content/uploads/2022/05/Package_Print-2-2-scaled.jpg" , 
+        "https://upload.wikimedia.org/wikipedia/commons/9/98/%27Gully_Cricket%27_played_on_racecourse_grounds..JPG"
       ]),
   Post(
       postRenderEnum: PostRenderEnum.approval,
@@ -244,46 +265,15 @@ List<Post> trendingList = [
       userName: "@savageCarol",
       name: "Kartikeya Sharma",
       eventTime: DateTime.now(),
-      title: "lets play game ",
-      description: "",
+      title: "Music Night ",
+      description: "Tomorrow there is music fest at abes college looking for parnter to attend with me ",
       tagList: [
-        TagName(id: "12", tagName: "Cricket"),
-        TagName(id: "123", tagName: "Cricket")
+        TagName(id: "12", tagName: "Music"),
+        TagName(id: "123", tagName: "Art")
       ],
       images: [
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"
-      ]),
-  Post(
-      postRenderEnum: PostRenderEnum.approval,
-      userId: "dsfdsfdsf",
-      id: "121212",
-      userName: "@savageCarol",
-      name: "Kartikeya Sharma",
-      eventTime: DateTime.now(),
-      title: "lets play game ",
-      description: "",
-      tagList: [
-        TagName(id: "12", tagName: "Cricket"),
-        TagName(id: "123", tagName: "Cricket")
-      ],
-      images: [
-        "https://p7.hiclipart.com/preview/466/652/1016/5bbdf7443b97c.jpg"
-      ]),
-  Post(
-      postRenderEnum: PostRenderEnum.intrested,
-      userId: "dsfdsfdsf",
-      id: "121212",
-      userName: "@savageCarol",
-      name: "Kartikeya Sharma",
-      eventTime: DateTime.now(),
-      title: "lets play game ",
-      description: "",
-      tagList: [
-        TagName(id: "12", tagName: "Cricket"),
-        TagName(id: "123", tagName: "Cricket")
-      ],
-      images: [
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"
+        "https://unwindpune.in/wp-content/uploads/2022/01/Saturday-Night-Live-Music-Pune.jpg",
+        "https://s3.envato.com/files/186588256/Preview.jpg"
       ]),
   Post(
       postRenderEnum: PostRenderEnum.message,
@@ -295,10 +285,10 @@ List<Post> trendingList = [
       title: "lets play game ",
       description: "",
       tagList: [
-        TagName(id: "12", tagName: "Cricket"),
-        TagName(id: "123", tagName: "Cricket")
+        TagName(id: "12", tagName: "Badminton"),
+        TagName(id: "123", tagName: "Tennis")
       ],
       images: [
-        "https://wallpapers.com/images/featured/beautiful-scenery-wnxju2647uqrcccv.jpg"
+        "https://www.thegolfinghub.com/wp-content/uploads/2022/08/DELHI_BADMINTON.jpg"
       ]),
 ];
