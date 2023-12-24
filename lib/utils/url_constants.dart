@@ -7,4 +7,5 @@ class Urlconstants {
   static String addProfileUrl = "/add-profile-data";
   static String settingUrl = "/setting-url";
   static String editTagsUrl = "/edit-tags-url";
+  static String getLocation = "/get-location-url";
 }

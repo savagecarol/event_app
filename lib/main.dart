@@ -1,6 +1,7 @@
 import 'package:connect/presentation/pages/helper/add_profile.dart';
 import 'package:connect/presentation/pages/auth/auth.dart';
 import 'package:connect/presentation/pages/helper/edit_tag_screen.dart';
+import 'package:connect/presentation/pages/helper/get_location.dart';
 import 'package:connect/presentation/pages/screen/app_start.dart';
 import 'package:connect/presentation/pages/auth/otp.dart';
 import 'package:connect/presentation/pages/screen/setting_screen.dart';
@@ -67,6 +68,10 @@ class MyApp extends StatelessWidget {
               GetPage(
                   name: Urlconstants.settingUrl,
                   page: () => const SettingScreen(),
+                  transition: Transition.circularReveal),
+            GetPage(
+                  name: Urlconstants.getLocation,
+                  page: () => const GetLocation(),
                   transition: Transition.circularReveal),
             ],
           );

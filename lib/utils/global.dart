@@ -4,6 +4,7 @@ import 'package:connect/model/action/GlobalController.dart';
 import 'package:connect/model/parent_tag.dart';
 import 'package:connect/model/post.dart';
 import 'package:connect/model/tag_name.dart';
+import 'package:connect/services/location_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -14,6 +15,7 @@ import 'dart:core';
 import 'package:image_picker/image_picker.dart';
 
 final GlobalController globalController = Get.put(GlobalController());
+final LocationService locationService = LocationService.getInstance();
 final ImagePicker picker = ImagePicker();
 
 String? validatePhoneNumber(String? phone) {

@@ -132,13 +132,14 @@ class AddPost extends StatelessWidget {
                   SizedBox(
                     height: 16.h,
                   ),
-                   CustomTextField(
-                    hintText: "Location",
-                    onChange: (Value) => {},
-                    initialValue: '',
-                    textInputType: TextInputType.phone,
+                   CustomTextButton(
+                    text: "Location",
+                    onTap: () {
+                      Get.toNamed(Urlconstants.getLocation);
+                    },
+                    isPostIcon: true,
+                    iconSize: 18.h,
                   ),
-                  
                   SizedBox(
                     height: 16.h,
                   ),
@@ -164,7 +165,7 @@ class AddPost extends StatelessWidget {
                     containerColor: ColorConstants.white,
                     shadowColor: ColorConstants.white,
                     labelText: "Add Event ",
-                    visiblepostIcon: true,
+                    visiblepostIcon: false,
                     labelTextWeight: FontWeight.w700,
                     postIcon: Icons.arrow_forward_rounded,
                     sizelabelText: 16.sp,
