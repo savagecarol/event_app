@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
           _getBottomBarItem(index: 0, icontab: Icons.home),
           _getBottomBarItem(index: 1, icontab: Icons.search),
           _getBottomBarItem(index: 2, icontab: Icons.add),
-          _getBottomBarItem(index: 3, icontab: Icons.chat),
+          _getBottomBarItem(index: 3, icontab: Icons.bookmark),
           _getBottomBarItem(index: 4, icontab: Icons.account_box),
         ],
       ),
